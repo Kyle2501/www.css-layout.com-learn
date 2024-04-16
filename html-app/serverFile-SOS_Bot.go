@@ -84,6 +84,21 @@ var classSchedule[] {
     
 }
 
+func listClass() {
+    
+    
+}
+
+func loadClass() {
+    
+    
+}
+
+func joinClass() {
+    
+    
+}
+
 
 
 func startClass() {
