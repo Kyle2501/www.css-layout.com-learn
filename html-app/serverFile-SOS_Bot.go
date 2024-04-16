@@ -99,6 +99,11 @@ func joinClass() {
     
 }
 
+func leaveClass() {
+    
+    
+}
+
 
 
 func startClass() {
