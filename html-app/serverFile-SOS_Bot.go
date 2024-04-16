@@ -180,6 +180,8 @@ func main() {
   
   http.HandleFunc("/", indexHandler)
   
+  http.HandleFunc("/action/about", aboutBot)
+  
   http.HandleFunc("/action/listclass", listClass)
   
   http.HandleFunc("/action/loadclass", loadClass)
