@@ -164,6 +164,21 @@ func addDocAsEntity(ctx context.Context, client *firestore.Client) error {
 
 
 
+func addHomeworkToFile(ctx context.Context, client *firestore.Client, saveHomework) error {
+  homeworkData := saveHomework
+
+  _, err := client.Collection("HomeworkFile").Doc("studentData").Set(ctx, homeworkData)
+        
+  if err != nil {
+    // Handle any errors
+    log.Printf("An error has occurred: %s", err)
+  }
+  return err
+}
+
+
+
+
 func startClass() {
     var user := studentProfiles[] {}
     
@@ -197,7 +212,18 @@ func homework() {
     
 // receives homework files from Discord User Interface
     
-    var homework := homeworkData[] {}
+    var saveHomework := homeworkData[] {}
+    
+    action := getActionType() {
+        
+    }
+    if action == turnIn {
+        
+        addHomeworkToFile(saveHomework)
+        
+        
+    }
+    
     
 }
 
