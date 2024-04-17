@@ -177,6 +177,20 @@ func addHomeworkToFile(ctx context.Context, client *firestore.Client, saveHomewo
 }
 
 
+func addStudentAttendence(ctx context.Context, client *firestore.Client, attendenceData) error {
+  studentData := attendenceData
+
+  _, err := client.Collection("AttendenceData").Doc("studentAttendence").Set(ctx, studentData)
+        
+  if err != nil {
+    // Handle any errors
+    log.Printf("An error has occurred: %s", err)
+  }
+  return err
+}
+
+
+
 
 
 func startClass() {
@@ -187,6 +201,8 @@ func startClass() {
     var here := studentAttendence[] {}
     
     var classTimer := ':'
+    
+    addStudentAttendece(attendenceData)
     
 }
 
