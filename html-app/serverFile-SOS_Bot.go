@@ -12,6 +12,9 @@ import (
 	"net/http"
 	
 	"cloud.google.com/go/firestore"
+	
+	firebase "firebase.google.com/go"
+  "google.golang.org/api/option"
 )
 
 
@@ -104,6 +107,19 @@ func joinClass() {
 func leaveClass() {
     
     
+}
+
+
+func addDocWithID(ctx context.Context, client *firestore.Client) error {
+  var data = make(map[string]interface{})
+
+  _, err := client.Collection("class").Doc("new-class-id").Set(ctx, data)
+  
+  
+  if err != nil {
+     log.Printf("An error has occurred: %s", err)
+  }
+  return err
 }
 
 
