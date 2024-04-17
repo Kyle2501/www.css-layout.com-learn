@@ -41,6 +41,7 @@ type paymentInformation struct {
     studentID string
     statusDate string
     paymentStatus string
+    paymentHistory []string
     
 }
 
@@ -143,6 +144,21 @@ func addDocDataTypes(ctx context.Context, client *firestore.Client) error {
    // Handle any errors
     log.Printf("An error has occurred: %s", err)
  }
+  return err
+}
+
+func addDocAsEntity(ctx context.Context, client *firestore.Client) error {
+  studentData := studentData{
+    Name:    "Phoenix",
+    Status: "Active",
+}
+
+  _, err := client.Collection("studentData").Doc("studentData").Set(ctx, studentData)
+        
+  if err != nil {
+    // Handle any errors
+    log.Printf("An error has occurred: %s", err)
+  }
   return err
 }
 
