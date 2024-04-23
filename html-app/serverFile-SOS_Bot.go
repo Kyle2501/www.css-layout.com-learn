@@ -365,4 +365,24 @@ func main() {
  http.HandleFunc("/homepage", indexHandler)
     
     
+    // -- -
+        port := os.Getenv("PORT")
+        if port == "" {
+                port = "8080"
+                log.Printf("Loading _webapp with default port")
+        }
+        log.Printf("_webapp is active and Listening on port %s", port)
+        
+        log.Printf("// -- - %s", appName)
+        log.Printf("_webapp now loaded and running at http://localhost:%s", port)
+        
+// -- - 
+        if err := http.ListenAndServe(":"+port, nil); err != nil {
+                log.Fatal("Error Starting the HTTP Server :", err)
+                return
+        }
+
+    
+    
+    
 }
