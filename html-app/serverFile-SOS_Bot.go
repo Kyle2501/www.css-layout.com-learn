@@ -17,6 +17,8 @@ import (
 	
 	firebase "firebase.google.com/go"
   "google.golang.org/api/option"
+  
+  
 )
 
 
@@ -289,9 +291,39 @@ func endClass() {
     
     var here := studentAttendence[] {}
     
- 
-    
 }
+
+// . indexHandler
+func indexHandler(w http.ResponseWriter, r *http.Request) {
+
+    if r.URL.Path != "/" {
+    	http.NotFound(w, r)
+    	return
+    }
+    
+// ,
+
+  pageTitle := "SOS Bot App"
+  pagePath := r.URL.Path
+    
+  pageData := htmlPageData {
+      pageTitle: pageTitle,
+      pagePath: pagePath,
+      
+      pageList: []pageNav {
+          { pageTitle: "one", pageLink: "one"},
+          { pageTitle: "two", pageLink: "two"},
+          { pageTitle: "three", pageLink: "three"},
+      },
+  	
+  }  //. .  pageData
+  
+  
+  pageFilePath := template.Must(template.ParseFiles("main_layout.html"))
+  pageFilePath.Execute(w, pageData)
+  
+}  //  .  indexHandler
+
 
 
 func main() {
