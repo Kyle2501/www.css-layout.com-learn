@@ -290,6 +290,23 @@ func studentFeildtrip() {
     
 }
 
+
+
+
+func addMovieToList(ctx context.Context, client *firestore.Client, addMovie) error {
+  _MovieListData := addMovie
+
+  _, err := client.Collection("MovieList").Doc("MovieList").Set(ctx, _MovieListData)
+        
+  if err != nil {
+    // Handle any errors
+    log.Printf("An error has occurred: %s", err)
+  }
+  return err
+}
+
+
+
 func watchMovie() {
     var class := classSchedule[] {}
     var here := studentAttendence[] {}
