@@ -233,6 +233,21 @@ func meetTeacher() {
 
 }
 
+
+
+
+func addEventToList(ctx context.Context, client *firestore.Client, addEvent) error {
+  _EventListData := addEvent
+
+  _, err := client.Collection("EventList").Doc("EventList").Set(ctx, _EventListData)
+        
+  if err != nil {
+    // Handle any errors
+    log.Printf("An error has occurred: %s", err)
+  }
+  return err
+}
+
 func doEvent() {
     var user := studentProfiles[] {}
     var class := classSchedule[] {}
@@ -240,6 +255,9 @@ func doEvent() {
     var event := eventData[] {}
     
 }
+
+
+
 
 
 func homework() {
