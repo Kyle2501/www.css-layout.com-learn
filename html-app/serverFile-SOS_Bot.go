@@ -94,6 +94,24 @@ var classSchedule[] {
     
 }
 
+
+
+func addClassToList(ctx context.Context, client *firestore.Client, addClass) error {
+  _ClassListData := addClass
+
+  _, err := client.Collection("ClassList").Doc("ClassList").Set(ctx, _ClassListData)
+        
+  if err != nil {
+    // Handle any errors
+    log.Printf("An error has occurred: %s", err)
+  }
+  return err
+}
+
+
+
+
+
 func listClass() {
     
     
