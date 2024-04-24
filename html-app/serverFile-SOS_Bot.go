@@ -298,6 +298,20 @@ func meetStudents() {
     
 }
 
+func addFeildtripToList(ctx context.Context, client *firestore.Client, addFeildtrip) error {
+  _FeildtripListData := addFeildtrip
+
+  _, err := client.Collection("FeildtripList").Doc("FeildtripList").Set(ctx, _FeildtripListData)
+        
+  if err != nil {
+    // Handle any errors
+    log.Printf("An error has occurred: %s", err)
+  }
+  return err
+}
+
+
+
 func studentFeildtrip() {
     
     var class := classSchedule[] {}
