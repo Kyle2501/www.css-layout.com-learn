@@ -298,6 +298,8 @@ func meetStudents() {
     
 }
 
+
+
 func addFeildtripToList(ctx context.Context, client *firestore.Client, addFeildtrip) error {
   _FeildtripListData := addFeildtrip
 
@@ -345,10 +347,27 @@ func watchMovie() {
     
 }
 
+
+
+func addWorkshopToList(ctx context.Context, client *firestore.Client, addWorkshop) error {
+  _WorkshopListData := addWorkshop
+
+  _, err := client.Collection("WorkshopList").Doc("WorkshopList").Set(ctx, _WorkshopListData)
+        
+  if err != nil {
+    // Handle any errors
+    log.Printf("An error has occurred: %s", err)
+  }
+  return err
+}
+
+
 func studentWorkshops() {
     
     
 }
+
+
 
 
 func endClass() {
