@@ -84,13 +84,27 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 
     if r.URL.Path != "/" {
     	http.NotFound(w, r)
-    	return
-    }
-    
+    	return }
 // ,
 
   pageTitle := "CSS Layout - learn - Website App"
   pagePath := r.URL.Path
+  
+  if pagePage == "join/discord" {
+      pageTitle = "Join Discord"
+  }
+  
+  if pagePage == "join/classroom" {
+      pageTitle = "Join Classroom"
+  }
+  
+  if pagePage == "join/notion" {
+      pageTitle = "Join Notion"
+  }
+  
+   if pagePage == "join/payments" {
+      pageTitle = "Student Payments"
+  }
     
   pageData := htmlPageData {
       pageTitle: pageTitle,
