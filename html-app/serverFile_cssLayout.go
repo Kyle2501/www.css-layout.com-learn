@@ -120,6 +120,18 @@ func main() {
     
     http.HandleFunc("/", indexHandler)
     
+    
+    
+    
+    http.HandleFunc("/join/classroom", indexHandler)
+    http.HandleFunc("/join/discord", indexHandler)
+    http.HandleFunc("/join/notion", indexHandler)
+    http.HandleFunc("/join/payments", indexHandler)
+    
+    
+    
+
+    
     http.HandleFunc("/project_level/zero", indexHandler)
     http.HandleFunc("/project_level/one", indexHandler)
     http.HandleFunc("/project_level/two", indexHandler)
