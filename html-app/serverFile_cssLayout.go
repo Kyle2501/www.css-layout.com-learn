@@ -5,16 +5,16 @@ package main
 // .
 
 import (
-		"os"
-		"log"
+  "os"
+  "log"
 		
-		"text/template"
-		"net/http"
+  "text/template"
+  "net/http"
 		
-		"cloud.google.com/go"
+  "cloud.google.com/go"
 		
-		"cloud.google.com/go/firestore"
-		"google.golang.org/api/iterator"
+  "cloud.google.com/go/firestore"
+  "google.golang.org/api/iterator"
 )
 
 
@@ -102,9 +102,32 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
       pageTitle = "Join Notion"
   }
   
-   if pagePage == "join/payments" {
+  if pagePage == "join/payments" {
       pageTitle = "Student Payments"
   }
+    
+    
+    
+    
+  if pagePage == "project_level/zero" {
+      pageTitle = "Zero :: Project Level"
+  }
+
+  if pagePage == "project_level/one" {
+      pageTitle = "One :: Project Level"
+  }
+    
+  if pagePage == "project_level/two" {
+      pageTitle = "Two :: Project Level"
+  }
+    
+    
+  if pagePage == "project_level/three" {
+      pageTitle = "Three :: Project Level"
+  }
+    
+    
+    
     
   pageData := htmlPageData {
       pageTitle: pageTitle,
