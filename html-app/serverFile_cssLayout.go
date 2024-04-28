@@ -158,7 +158,7 @@ func main() {
     http.HandleFunc("/", indexHandler)
     
     
-    
+// ,-
     
     http.HandleFunc("/join/classroom", indexHandler)
     http.HandleFunc("/join/discord", indexHandler)
@@ -166,15 +166,14 @@ func main() {
     http.HandleFunc("/join/payments", indexHandler)
     
     
-    
-
+// ,-
     
     http.HandleFunc("/project_level/zero", indexHandler)
     http.HandleFunc("/project_level/one", indexHandler)
     http.HandleFunc("/project_level/two", indexHandler)
     http.HandleFunc("/project_level/three", indexHandler)
     
-    
+// ,-
     
     
     http.HandleFunc("/app", appHandler)
@@ -183,23 +182,25 @@ func main() {
 
 
 // -- -
-        port := os.Getenv("PORT")
-        if port == "" {
-                port = "8080"
-                log.Printf("Loading _webapp with default port")
-        }
-        log.Printf("_webapp is active and Listening on port %s", port)
+ port := os.Getenv("PORT")
+ if port == "" {
+  port = "8080"
+  log.Printf("Loading _webapp with default port")
+ }
+ 
+ 
+  log.Printf("_webapp is active and Listening on port %s", port)
         
-        log.Printf("// -- - %s", appName)
-        log.Printf("_webapp now loaded and running at http://localhost:%s", port)
+  log.Printf("// -- - %s", appName)
+  log.Printf("_webapp now loaded and running at http://localhost:%s", port)
         
 // -- - 
-        if err := http.ListenAndServe(":"+port, nil); err != nil {
-                log.Fatal("Error Starting the HTTP Server :", err)
-                return
-        }
+ if err := http.ListenAndServe(":"+port, nil); err != nil {
+ log.Fatal("Error Starting the HTTP Server :", err)
+  return
+ }
 
 
-}
+} // ,- func main app run
 
 
