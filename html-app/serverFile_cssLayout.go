@@ -90,6 +90,12 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
   pageTitle := "CSS Layout - learn - Website App"
   pagePath := r.URL.Path
   
+  pageList := []pageNav {
+     { pageTitle: "one", pageLink: "one"},
+     { pageTitle: "two", pageLink: "two"},
+     { pageTitle: "three", pageLink: "three"},
+    }
+  
   if pagePath == "join/discord" {
       pageTitle = "Join Discord"
   }
@@ -127,17 +133,13 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
   }
     
     
-    
+// ,-
     
   pageData := htmlPageData {
-      pageTitle: pageTitle,
-      pagePath: pagePath,
+    pageTitle: pageTitle,
+    pagePath: pagePath,
       
-      pageList: []pageNav {
-          { pageTitle: "one", pageLink: "one"},
-          { pageTitle: "two", pageLink: "two"},
-          { pageTitle: "three", pageLink: "three"},
-      },
+    pageList: pageList,
   	
   }  //. .  pageData
   
