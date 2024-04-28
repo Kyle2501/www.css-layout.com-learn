@@ -90,39 +90,39 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
   pageTitle := "CSS Layout - learn - Website App"
   pagePath := r.URL.Path
   
-  if pagePage == "join/discord" {
+  if pagePath == "join/discord" {
       pageTitle = "Join Discord"
   }
   
-  if pagePage == "join/classroom" {
+  if pagePath == "join/classroom" {
       pageTitle = "Join Classroom"
   }
   
-  if pagePage == "join/notion" {
+  if pagePath == "join/notion" {
       pageTitle = "Join Notion"
   }
   
-  if pagePage == "join/payments" {
+  if pagePath == "join/payments" {
       pageTitle = "Student Payments"
   }
     
     
     
     
-  if pagePage == "project_level/zero" {
+  if pagePath == "project_level/zero" {
       pageTitle = "Zero :: Project Level"
   }
 
-  if pagePage == "project_level/one" {
+  if pagePath == "project_level/one" {
       pageTitle = "One :: Project Level"
   }
     
-  if pagePage == "project_level/two" {
+  if pagePath == "project_level/two" {
       pageTitle = "Two :: Project Level"
   }
     
     
-  if pagePage == "project_level/three" {
+  if pagePath == "project_level/three" {
       pageTitle = "Three :: Project Level"
   }
     
