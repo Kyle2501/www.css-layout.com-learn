@@ -1,170 +1,168 @@
-<!doctype html>
-<html>
-<head>
+// . . CSS Layout - learn - Website App
+
+package main
+
+// .
+
+import (
+		"os"
+		"log"
+		
+		"text/template"
+		"net/http"
+		
+		"cloud.google.com/go"
+		
+		"cloud.google.com/go/firestore"
+		"google.golang.org/api/iterator"
+)
+
+
+
+type htmlPageData struct {
+    pageTitle string
+    pagePath string
+    pageList []pageNav
     
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+}
 
-<style>
 
-body { padding-bottom: 175px; }
+type pageNav struct {
+    pageTitle string
+    pageLink string
+}
 
-.login_wrap { position: absolute; right: 10px; top: 5px; }
 
-.shop_keyboards_wrap { width: 85%; margin: 0 auto; }
 
-.section_wrap { margin-top: 45px; }
+// . appHandler
+func appHandler(w http.ResponseWriter, r *http.Request) {
 
-.outline_wrap { width: 85%; margin: 0 auto; }
-
-ul li { margin-bottom: 8px; }
+    if r.URL.Path != "/app" {
+    	http.NotFound(w, r)
+    	return
+    }
     
-.step_area_wrap div { outline: 1px solid #999; padding: 15px; }
+// ,
 
-.example_code_wrap { outline: 1px solid #999; padding: 15px; min-height: 135px; }
+  pageTitle := "CSS Layout - learn - Website App"
+  pagePath := r.URL.Path
+  
+  pageType := ".."
+  
+  userAccountFocus := ".."
+  userAccountChange := ".."
+  userAccountActivity := ".."
+  userAccountMetrics := ".."
+  
+  userAccountData := ".."
+  userAccountJSON := ".."
+  
+  client, err := storage.NewClient(ctx)
+  
+    
+  pageData := htmlPageData {
+      pageTitle: pageTitle,
+      pagePath: pagePath,
+      
+      pageList: []pageNav {
+          { pageTitle: "one", pageLink: "one"},
+          { pageTitle: "two", pageLink: "two"},
+          { pageTitle: "three", pageLink: "three"},
+      },
+  	
+  }  //. .  pageData
+  
+  
+  pageFilePath := template.Must(template.ParseFiles("main_layout.html"))
+  pageFilePath.Execute(w, pageData)
+  
+}  //  .  appHandler
 
 
-.board_process { position: relative; }
+// . indexHandler
+func indexHandler(w http.ResponseWriter, r *http.Request) {
 
-.board_process button { position: absolute; right: 65px; }
+    if r.URL.Path != "/" {
+    	http.NotFound(w, r)
+    	return
+    }
+    
+// ,
+
+  pageTitle := "CSS Layout - learn - Website App"
+  pagePath := r.URL.Path
+    
+  pageData := htmlPageData {
+      pageTitle: pageTitle,
+      pagePath: pagePath,
+      
+      pageList: []pageNav {
+          { pageTitle: "one", pageLink: "one"},
+          { pageTitle: "two", pageLink: "two"},
+          { pageTitle: "three", pageLink: "three"},
+      },
+  	
+  }  //. .  pageData
+  
+  
+  pageFilePath := template.Must(template.ParseFiles("main_layout.html"))
+  pageFilePath.Execute(w, pageData)
+  
+}  //  .  indexHandler
 
 
-.project_levels { position: relative;  }
+//  .  html url routes as well as terminal cli logs
 
-.project_levels button { position: absolute; right: 35px; }
+func main() {
+
+    appName := "CSS Layout - learn - Website App"
+    
+    
+    http.HandleFunc("/", indexHandler)
+    
+    
+    
+    
+    http.HandleFunc("/join/classroom", indexHandler)
+    http.HandleFunc("/join/discord", indexHandler)
+    http.HandleFunc("/join/notion", indexHandler)
+    http.HandleFunc("/join/payments", indexHandler)
+    
+    
+    
 
     
-</style>
+    http.HandleFunc("/project_level/zero", indexHandler)
+    http.HandleFunc("/project_level/one", indexHandler)
+    http.HandleFunc("/project_level/two", indexHandler)
+    http.HandleFunc("/project_level/three", indexHandler)
+    
+    
+    
+    
+    http.HandleFunc("/app", appHandler)
 
+
+
+
+// -- -
+        port := os.Getenv("PORT")
+        if port == "" {
+                port = "8080"
+                log.Printf("Loading _webapp with default port")
+        }
+        log.Printf("_webapp is active and Listening on port %s", port)
         
-</head>
-    
-<body>
-    
- <p>www.css-layout.com/learn</p>
- <br />
- <hr />
- 
- <div class="login_wrap">
-     <a href="../login">login</a>
- </div>
- 
- <div class="shop_keyboards_wrap">
-   <p><b>Shop for Keyboards</b></p>
-     <p><button>Here</button>
-    </p>
- </div><!-- - .shop_keyboards_wrap - -->
-    
-     <br />
- <hr />
- 
-    
-  <div class="section_wrap">
-      
-    <div class="outline_wrap">
-     
-      <p><b>On Boarding Process</b></p>
-            
-     <ul>
-      <li>Pay Student Fee</li>
-      <li>Join Google Classroom</li>
-      <li>Join Discord Channel</li>
-      <li>Make Notion Profile Page</li>
-                
-                
-      </ul>
-            
-    </div>
-  </div>
-  
+        log.Printf("// -- - %s", appName)
+        log.Printf("_webapp now loaded and running at http://localhost:%s", port)
+        
+// -- - 
+        if err := http.ListenAndServe(":"+port, nil); err != nil {
+                log.Fatal("Error Starting the HTTP Server :", err)
+                return
+        }
 
 
-    <div class="section_wrap">
-      
-    <div>
-     
-      <p><b>On Boarding Process</b></p>
-            
-     <div class="step_area_wrap board_process">
-      <div>&#10024; &#x2728; &nbsp;
-          Pay Student Fee
-        <a href="https://kyle2501.gumroad.com/l/learn-gallery-student-fee" target="blank"><button>Open</button></a>
-      </div>
-      <div>&#10024; &#x2728; &nbsp;
-      Join Google Classroom
-        <a href="https://classroom.google.com/c/NTA0MTkyMTMwMjYx?cjc=tksbjfv" target="blank"><button>Open</button></a>
-        
-      </div>
-      <div>
-     &#10024; &#x2728; &nbsp;
-      
-      Join Discord Channel
-        <button>Open</button>
-        
-      </div>
-      <div>
-          &#10024; &#x2728; &nbsp;
-          Make Notion Profile Page
-        <button>Open</button>
-      
-      </div>
-                
-                
-      </div>
-            
-    </div>
-  </div>
-  
-    <div class="section_wrap">
-      
-      <p><b>Project Learning Levels</b></p>
-      
-<ul>
- <li>_ Level Zero // Setup Environment</li>
- <li>_ Level One // Text and Color</li>
- <li>_ Level Two // The Box Model</li>
- <li>_ Level Three // Element Class Name</li>
-</ul>
-      
-  </div>
-  
-<div class="section_wrap">
- <div class="section_data">
-  <div class="step_area_wrap">
-    <p><b>Example CSS Code</b></p>
-    
-    <div class="example_code_wrap">
-    
-    </div>
-                
-  </div><!-- - .step_area_wrap - -->
- </div><!-- - .section_data - -->
-</div><!-- - .section_wrap - -->
-  
-<div class="section_wrap">
-  <div class="section_data">
-    <p><b>Project Learning Levels</b></p>
-    <div class="step_area_wrap project_levels">
-         
-      <div>_ Level Zero - Setup Environment
-          <button>Open</button></div>
-          
-      <div>_ Level One - Text and Color
-          <button>Open</button></div>
-          
-      <div>_ Level Two - The Box Model
-          <button>Open</button></div>
-          
-      <div>_ Level Three - Element Class Names  <button>Open</button></div>
-                
-                
-    </div><!-- - .step_area_wrap - -->
-  </div><!-- - .section_data - -->
-</div><!-- - .section_wrap - -->
-  
+}
 
-  
-        
-</body>
-    
-</html>
 
