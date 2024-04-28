@@ -98,18 +98,22 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
   
   if pagePath == "join/discord" {
       pageTitle = "Join Discord"
+      pageList = pageList
   }
   
   if pagePath == "join/classroom" {
       pageTitle = "Join Classroom"
+      pageList = pageList
   }
   
   if pagePath == "join/notion" {
       pageTitle = "Join Notion"
+      pageList = pageList
   }
   
   if pagePath == "join/payments" {
       pageTitle = "Student Payments"
+      pageList = pageList
   }
     
     
@@ -117,19 +121,23 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
     
   if pagePath == "project_level/zero" {
       pageTitle = "Zero :: Project Level"
+      pageList = pageList
   }
 
   if pagePath == "project_level/one" {
       pageTitle = "One :: Project Level"
+      pageList = pageList
   }
     
   if pagePath == "project_level/two" {
       pageTitle = "Two :: Project Level"
+      pageList = pageList
   }
     
     
   if pagePath == "project_level/three" {
       pageTitle = "Three :: Project Level"
+      pageList = pageList
   }
     
     
