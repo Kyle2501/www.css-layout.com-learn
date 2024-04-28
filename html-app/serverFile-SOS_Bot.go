@@ -1,182 +1,192 @@
-// . . CSS Layout - learn - Website App
+// # sos-bot
 
 package main
 
-// .
+
 
 import (
-		"os"
-		"log"
+    "os"
+    "log"
 		
-		"text/template"
-		"net/http"
-		
-		"cloud.google.com/go"
-		
-		"cloud.google.com/go/firestore"
-		"google.golang.org/api/iterator"
+	"text/template"
+	"net/http"
 )
 
 
+type classSchedule struct {
+    weekDay string
+    dayTime string
+    month string
+    year string
+    className string
+    classID string
+    
+}
 
-type htmlPageData struct {
-    pageTitle string
-    pagePath string
-    pageList []pageNav
+type studentProfiles struct {
+    studentName string
+    studentID string
+    
+}
+
+type paymentInformation struct {
+    studentName string
+    studentID string
+    statusDate string
+    paymentStatus string
     
 }
 
 
-type pageNav struct {
-    pageTitle string
-    pageLink string
+type studentAttendence struct {
+    
+    
+}
+
+type classEvent struct {
+    
+    
+}
+
+type studentHomework struct {
+    studentName string
+    studentID string
+    
+    
+}
+
+type studentFeildtrips struct {
+    
+    
+}
+
+type classQuestions struct {
+    
+    
+}
+
+type classMovies struct {
+    
+    
+}
+
+type studentWorkshops struct {
+    
+    
+}
+
+
+var classSchedule[] {
+    
+    weekDays : ['Mon','Wed','Fri'],
+    timeDay : ['10:am','2:pm']
+    
+    
 }
 
 
 
-// . appHandler
-func appHandler(w http.ResponseWriter, r *http.Request) {
-
-    if r.URL.Path != "/app" {
-    	http.NotFound(w, r)
-    	return
-    }
+func startClass() {
+    var user := studentProfiles[] {}
+    var class := classSchedule[] {}
     
-// ,
-
-  pageTitle := "CSS Layout - learn - Website App"
-  pagePath := r.URL.Path
-  
-  pageType := ".."
-  
-  userAccountFocus := ".."
-  userAccountChange := ".."
-  userAccountActivity := ".."
-  userAccountMetrics := ".."
-  
-  userAccountData := ".."
-  userAccountJSON := ".."
-  
-  client, err := storage.NewClient(ctx)
-  
+    var here := studentAttendence[] {}
     
-  pageData := htmlPageData {
-      pageTitle: pageTitle,
-      pagePath: pagePath,
-      
-      pageList: []pageNav {
-          { pageTitle: "one", pageLink: "one"},
-          { pageTitle: "two", pageLink: "two"},
-          { pageTitle: "three", pageLink: "three"},
-      },
-  	
-  }  //. .  pageData
-  
-  
-  pageFilePath := template.Must(template.ParseFiles("main_layout.html"))
-  pageFilePath.Execute(w, pageData)
-  
-}  //  .  appHandler
-
-
-// . indexHandler
-func indexHandler(w http.ResponseWriter, r *http.Request) {
-
-    if r.URL.Path != "/" {
-    	http.NotFound(w, r)
-    	return }
-// ,
-
-  pageTitle := "CSS Layout - learn - Website App"
-  pagePath := r.URL.Path
-  
-  if pagePage == "join/discord" {
-      pageTitle = "Join Discord"
-  }
-  
-  if pagePage == "join/classroom" {
-      pageTitle = "Join Classroom"
-  }
-  
-  if pagePage == "join/notion" {
-      pageTitle = "Join Notion"
-  }
-  
-   if pagePage == "join/payments" {
-      pageTitle = "Student Payments"
-  }
+    var classTimer := ':'
     
-  pageData := htmlPageData {
-      pageTitle: pageTitle,
-      pagePath: pagePath,
-      
-      pageList: []pageNav {
-          { pageTitle: "one", pageLink: "one"},
-          { pageTitle: "two", pageLink: "two"},
-          { pageTitle: "three", pageLink: "three"},
-      },
-  	
-  }  //. .  pageData
-  
-  
-  pageFilePath := template.Must(template.ParseFiles("main_layout.html"))
-  pageFilePath.Execute(w, pageData)
-  
-}  //  .  indexHandler
+}
+
+func meetTeacher() {
+    var user := studentProfiles[] {}
+    var class := classSchedule[] {}
+    
+
+}
+
+func doEvent() {
+    var user := studentProfiles[] {}
+    var class := classSchedule[] {}
+    
+    var event := eventData[] {}
+    
+}
 
 
-//  .  html url routes as well as terminal cli logs
+func homework() {
+    var user := studentProfiles[] {}
+    var class := classSchedule[] {}
+    
+// receives homework files from Discord User Interface
+    
+    var homework := homeworkData[] {}
+    
+}
+
+func askQuestions() {
+    var user := studentProfiles[] {}
+    var class := classSchedule[] {}
+    
+    var question := classQuestions[] {}
+    
+}
+
+func meetStudents() {
+    
+    var class := classSchedule[] {}
+       
+    var here := studentAttendence[] {}
+     
+    
+}
+
+func studentFeildtrip() {
+    
+    var class := classSchedule[] {}
+    
+    var here := studentAttendence[] {}
+    
+    var trip := studentFeildtrips[] {}
+    
+}
+
+func watchMovie() {
+    var class := classSchedule[] {}
+    var here := studentAttendence[] {}
+    
+}
+
+func studentWorkshops() {
+    
+    
+}
+
+
+func endClass() {
+    var user := studentProfiles[] {}
+    
+    var class := classSchedule[] {}
+    
+    var here := studentAttendence[] {}
+    
+ 
+    
+}
+
 
 func main() {
 
-    appName := "CSS Layout - learn - Website App"
+    appName := "SOS Bot App"
     
     
     http.HandleFunc("/", indexHandler)
     
+ http.HandleFunc("/action/startclass", startClass)
+ http.HandleFunc("/action/doevent", doEvents)
+ http.HandleFunc("/action/homework", homework)
+ http.HandleFunc("/action/askquestions", askQuestions)
+ http.HandleFunc("/action/meetstudents", meetStudents)
+ http.HandleFunc("/action/endclass", endClass)
+ http.HandleFunc("/", indexHandler)
     
     
-    
-    http.HandleFunc("/join/classroom", indexHandler)
-    http.HandleFunc("/join/discord", indexHandler)
-    http.HandleFunc("/join/notion", indexHandler)
-    http.HandleFunc("/join/payments", indexHandler)
-    
-    
-    
-
-    
-    http.HandleFunc("/project_level/zero", indexHandler)
-    http.HandleFunc("/project_level/one", indexHandler)
-    http.HandleFunc("/project_level/two", indexHandler)
-    http.HandleFunc("/project_level/three", indexHandler)
-    
-    
-    
-    
-    http.HandleFunc("/app", appHandler)
-
-
-
-
-// -- -
-        port := os.Getenv("PORT")
-        if port == "" {
-                port = "8080"
-                log.Printf("Loading _webapp with default port")
-        }
-        log.Printf("_webapp is active and Listening on port %s", port)
-        
-        log.Printf("// -- - %s", appName)
-        log.Printf("_webapp now loaded and running at http://localhost:%s", port)
-        
-// -- - 
-        if err := http.ListenAndServe(":"+port, nil); err != nil {
-                log.Fatal("Error Starting the HTTP Server :", err)
-                return
-        }
-
-
 }
-
-
