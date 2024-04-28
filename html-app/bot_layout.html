@@ -47,30 +47,45 @@ body { padding-bottom: 175px; }
 
 <div class="bot_nav">
   <ul>
-    <li>Class <button>open</button></li>
-    <li>People <button>open</button></li>
-    <li>Events <button>open</button></li>
-    <li>Projects <button>open</button></li>
+    <li>Classes <button onclick="openClasses()">open</button></li>
+    <li>People <button onclick="openPeople()">open</button></li>
+    <li>Events <button onclick="openEvents()">open</button></li>
+    <li>Projects <button onclick="openProjects()">open</button></li>
   </ul>
 </div>
 
 <div class="action_area_wrap">
   <div>Bot Action Area</div>
-  <div class="action_area_data">
-      
+  <div class="action_area_data" id="action_area_data">
+    <div id="bot_action_display">hi</div>
       
   </div>
 </div><!-- - .action_area_wrap - -->
 
 <div class="bot_action_button_wrap">
   <div class="bot_action_button_data">
-      <button>Activate</button>
+      <button onclick="changeColor()">Activate</button>
   </div>
 </div>
 
+<script>
 
+function changeColor() { document.getElementById("action_area_data").style.backgroundColor = "#00FF00"; }
+    
+function openClasses() { 
+    
+    document.getElementById("action_area_data").style.backgroundColor = "lightblue";
+    
+   var veiw = document.getElementById("bot_action_display");
+   
+   veiw.style.backgroundColor = "black";
+    
+    
+}
+    
+    
+</script>
 
-     
 </main>
  
 <footer>
