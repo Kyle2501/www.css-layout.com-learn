@@ -47,10 +47,10 @@ body { padding-bottom: 175px; }
 
 <div class="bot_nav">
   <ul>
-    <li>Classes <button onclick="openClasses()">open</button></li>
-    <li>People <button onclick="openPeople()">open</button></li>
-    <li>Events <button onclick="openEvents()">open</button></li>
-    <li>Projects <button onclick="openProjects()">open</button></li>
+    <li id="classesActions">Classes <button onclick="openClasses()">open</button></li>
+    <li id="peopleActions">People <button onclick="openPeople()">open</button></li>
+    <li id="eventsActions">Events <button onclick="openEvents()">open</button></li>
+    <li id="projectActions">Projects <button onclick="openProjects()">open</button></li>
   </ul>
 </div>
 
@@ -74,7 +74,7 @@ function changeColor() { document.getElementById("action_area_data").style.backg
     
 function openClasses() { 
     
-    document.getElementById("action_area_data").style.backgroundColor = "lightblue";
+    document.getElementById("classesActions").style.backgroundColor = "lightblue";
     
    var veiw = document.getElementById("bot_action_display");
    
@@ -86,7 +86,7 @@ function openClasses() {
     
 function openPeople() { 
     
-    document.getElementById("action_area_data").style.backgroundColor = "lightblue";
+    document.getElementById("peopleActions").style.backgroundColor = "lightblue";
     
    var veiw = document.getElementById("bot_action_display");
    
@@ -98,7 +98,7 @@ function openPeople() {
     
 function openEvents() { 
     
-    document.getElementById("action_area_data").style.backgroundColor = "lightblue";
+    document.getElementById("eventsActions").style.backgroundColor = "lightblue";
     
    var veiw = document.getElementById("bot_action_display");
    
@@ -110,7 +110,7 @@ function openEvents() {
     
 function openProjects() { 
     
-    document.getElementById("action_area_data").style.backgroundColor = "lightblue";
+    document.getElementById("projectActions").style.backgroundColor = "lightblue";
     
    var veiw = document.getElementById("bot_action_display");
    
