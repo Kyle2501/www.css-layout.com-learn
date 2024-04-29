@@ -204,9 +204,9 @@ function openEvents() {
    
    
    function_code = '<div><ul class="function_list">' +
-     '<li><button>Use</button> &nbsp; Watch Movie &nbsp; //</li>' +
-     '<li><button>Use</button> &nbsp; Student Feildtrip &nbsp; //</li>' +
-     '<li><button>Use</button> &nbsp; Student Workshop &nbsp; //</li>' +
+     '<li><button onclick="watchMovie()">Use</button> &nbsp; Watch Movie &nbsp; //</li>' +
+     '<li><button onclick="studentFieldtrip()">Use</button> &nbsp; Student Fieldtrip &nbsp; //</li>' +
+     '<li><button onclick="studentWorkshop()">Use</button> &nbsp; Student Workshop &nbsp; //</li>' +
     '</ul></div>';
    
    botFunctions = '<b>Event Functions</b>' +
@@ -218,6 +218,23 @@ function openEvents() {
     
     
 }
+
+function watchMovie() {
+    useFunction.innerHTML = 'Watch Movie';
+    
+}
+
+function studentFieldtrip() {
+    useFunction.innerHTML = 'Student Fieldtrip';
+    
+}
+
+function studentWorkshop() {
+    useFunction.innerHTML = 'Student Workshops';
+    
+}
+
+
 
     
 function openProjects() { 
@@ -231,8 +248,9 @@ function openProjects() {
   // document.getElementById("bot_action_display").innerHTML = 'passget';
   
   function_code = '<div><ul class="function_list">' +
-    '<li><button>Use</button> &nbsp; List Projects &nbsp; //</li>' +
-    '<li><button>Use</button> &nbsp; Homework &nbsp; //</li>' +
+    '<li><button onclick="listProjects()">Use</button> &nbsp; List Projects &nbsp; //</li>' +
+    '<li><button onclick="homework()">Use</button> &nbsp; Homework &nbsp; //</li>' +
+    '<li><button onclick="browseGallery()">Use</button> &nbsp; Browse Gallery &nbsp; //</li>'
   '</ul></div>';
   
   botFunctions = '<b>Project Functions</b>' + function_code;
@@ -243,6 +261,23 @@ function openProjects() {
    setCurrent("projectsActions");
    
 }
+
+function listProjects() {
+    useFunction.innerHTML = 'List Projects';
+    
+}
+
+function homework() {
+    useFunction.innerHTML = 'Homework';
+    
+}
+
+function browseGallery() {
+    useFunction.innerHTML = 'Browse Gallery';
+    
+}
+
+
 
 function makeNew(hi) {
     
