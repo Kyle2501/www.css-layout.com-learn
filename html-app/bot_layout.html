@@ -69,7 +69,7 @@ ul.function_list li { margin-bottom: 15px; }
 
 <div class="bot_action_button_wrap">
   <div class="bot_action_button_data">
-      <button onclick="changeColor()">Activate</button>
+      <button onclick="activateBot()">Activate</button>
   </div>
 </div>
 
@@ -79,9 +79,23 @@ ul.function_list li { margin-bottom: 15px; }
     
 </div><!-- - .clear_action_button_wrap - -->
 
+<div class="botStatus_area_wrap">
+  <div class="botStatus_area_data">
+      hi
+      
+      
+  </div>
+</div><!-- - .botStatus_area_wrap - -->
+
 <script>
 
-function changeColor() { document.getElementById("action_area_data").style.backgroundColor = "#00FF00"; }
+function changeColor() { document.getElementById("action_area_data").style.backgroundColor = "#00FF00"; 
+
+document.getElementById("action_area_data").innerHTML = 'hello';
+    
+    
+    
+}
 
 
 var classesActions = document.getElementById("classesActions");
@@ -311,6 +325,18 @@ function makeNew(hi) {
     
     document.getElementById("bot_action_display").innerHTML = hi;
 }
+
+
+function activateBot() {
+ 
+  document.getElementById("bot_action_display").innerHTML = 'hello';
+
+  useFunction.innerHTML = 'hello';
+    
+}
+
+
+
 
 
 function clearActions() {
