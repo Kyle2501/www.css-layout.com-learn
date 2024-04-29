@@ -25,6 +25,7 @@ ul.function_list li { margin-bottom: 15px; }
 
 .bot_action_button_wrap { margin: 10px; position: absolute; right: 15px; }
 
+.clear_action_button_wrap { margin: 15px; }
 
 </style>
 </head>
@@ -71,6 +72,12 @@ ul.function_list li { margin-bottom: 15px; }
       <button onclick="changeColor()">Activate</button>
   </div>
 </div>
+
+<div class="clear_action_button_wrap">
+    
+    <button onclick="clearActions()">Clear Actions</button>
+    
+</div><!-- - .clear_action_button_wrap - -->
 
 <script>
 
@@ -303,6 +310,15 @@ function browseGallery() {
 function makeNew(hi) {
     
     document.getElementById("bot_action_display").innerHTML = hi;
+}
+
+
+function clearActions() {
+    
+document.getElementById("bot_action_display").innerHTML = 'hi';
+
+useFunction.innerHTML = 'hi';
+
 }
     
 </script>
