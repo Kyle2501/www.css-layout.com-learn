@@ -95,15 +95,19 @@ function setCurrent(pass) {
     
 function openClasses() { 
     
-  document.getElementById('peopleAction').style.backgroundColor = "white";
+  // document.getElementById('peopleAction').style.backgroundColor = "white";
     
   classesActions.style.backgroundColor = "lightblue";
   
-  action_current = 'classesActions';
+  // action_current = 'classesActions';
     
    var veiw = document.getElementById("bot_action_display");
    
-   veiw.style.backgroundColor = "black";
+   // veiw.style.backgroundColor = "black";
+   
+   botFunctions = '<b>Class Functions</b>'
+  
+   makeNew(botFunctions);
     
 }
 
@@ -112,11 +116,15 @@ function openPeople() {
     
     peopleActions.style.backgroundColor = "lightblue";
     
-    action_current = '';
+    // action_current = '';
     
    var veiw = document.getElementById("bot_action_display");
    
-   veiw.style.backgroundColor = "black";
+  // veiw.style.backgroundColor = "black";
+  
+  botFunctions = '<b>People Functions</b>'
+  
+  makeNew(botFunctions);
     
     
 }
@@ -130,6 +138,24 @@ function openEvents() {
    var veiw = document.getElementById(action_current);
    
    veiw.style.backgroundColor = "#00FF00";
+   
+   
+   /* function_code = '<div><ul>
+     <li>Watch Movie</li>
+     <li>Student Feildtrip</li>
+     <li>Student Workshop</li>
+   
+   </ul></div>'; */
+   
+   
+   botFunctions = '<b>Event Functions</b>' +
+     '<div><ul>' +
+     '<li>Watch Movie</li>' +
+     '<li>Student Feildtrip</li>' +
+     '<li>Student Workshop</li>' +
+    '</ul></div>';
+  
+   makeNew(botFunctions);
    
    setCurrent('eventActions');
     
@@ -147,7 +173,10 @@ function openProjects() {
    
   // document.getElementById("bot_action_display").innerHTML = 'passget';
   
-  makeNew('tgh');
+  botFunctions = '<b>Project Functions</b>'
+  
+  makeNew(botFunctions);
+  
    
    setCurrent("projectsActions");
    
