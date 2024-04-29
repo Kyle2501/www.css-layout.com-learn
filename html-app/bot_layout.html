@@ -12,8 +12,9 @@ body { padding-bottom: 175px; }
 
 .action_area_wrap { outline: 1px solid #aaa; padding: 10px; }
 
-.action_area_data { outline: 1px dashed #ccc; min-height: 145px; }
+.action_area_data { outline: 1px dashed #ccc; min-height: 145px; position: relative; }
 
+#use_function_area { position: absolute; right: 5px; top: 0; }
 
 .bot_nav ul li { display: inline-block; outline: 1px solid #bbb; width: 40%; min-height: 45px; padding: 8px; margin: 4px; position: relative; }
 
@@ -60,6 +61,7 @@ ul.function_list li { margin-bottom: 15px; }
   <div>Bot Action Area</div>
   <div class="action_area_data" id="action_area_data">
     <div id="bot_action_display">hi</div>
+    <div id="use_function_area">hi</div>
       
   </div>
 </div><!-- - .action_area_wrap - -->
@@ -83,6 +85,7 @@ var eventActions = document.getElementById("eventsActions");
 
 var projectsActions = document.getElementById("projectActions");
 
+var useFunction = document.getElementById("use_function_area");
 
 var action_current = "classesActions";
 
@@ -132,8 +135,10 @@ function openPeople() {
   // veiw.style.backgroundColor = "black";
   
   function_code = '<div><ul class="function_list">' +
-    '<li><button>Use</button> &nbsp; Meet Teacher &nbsp; //</li>' +
-    '<li><button>Use</button> &nbsp; Meet Students &nbsp; //</li>' +
+    '<li><button onclick="meetTeachers()">Use</button> &nbsp; Meet Teachers &nbsp; //</li>' +
+    '<li><button onclick="meetStudents()">Use</button> &nbsp; Meet Students &nbsp; //</li>' +
+    '<li><button onclick="meetMentors()">Use</button> &nbsp; Meet Mentors &nbsp; //</li>' +
+    '<li><button onclick="meetStaff()">Use</button> &nbsp; Meet Staff &nbsp; //' +
    '</ul></div>';
   
   botFunctions = '<b>People Functions</b>' + function_code;
@@ -142,6 +147,31 @@ function openPeople() {
     
     
 }
+
+function meetTeachers() {
+    
+    useFunction.innerHTML = 'Meet Teachers';
+    
+}
+
+function meetStudents() {
+    useFunction.innerHTML = 'Meet Students';
+    
+}
+
+function meetMentors() {
+    useFunction.innerHTML = 'Meet Mentors';
+    
+}
+
+function meetStaff() {
+    useFunction.innerHTML = 'Meet Staff';
+    
+}
+
+
+
+
 
     
 function openEvents() { 
