@@ -114,6 +114,7 @@ function openClasses() {
      '<li><button onclick="listClass()">Use</button> &nbsp; List Class &nbsp; //</li>' +
      '<li><button onclick="loadClass()">Use</button> &nbsp; Load Class &nbsp; //</li>' +
      '<li><button onclick="joinClass()">Use</button> &nbsp; Join Class &nbsp; //</li>' +
+      '<li><button onclick="attendClass()">Use</button> &nbsp; Attend Class &nbsp; //</li>' +
      '<li><button onclick="leaveClass()">Use</button> &nbsp; Leave Class &nbsp; //</li>' +
     '</ul></div>';
    
@@ -134,6 +135,11 @@ function loadClass() {
 
 function joinClass() {
     useFunction.innerHTML = 'Join Class';
+    
+}
+
+function attendClass() {
+    useFunction.innerHTML = 'Attend Class';
     
 }
 
@@ -207,6 +213,8 @@ function openEvents() {
      '<li><button onclick="watchMovie()">Use</button> &nbsp; Watch Movie &nbsp; //</li>' +
      '<li><button onclick="studentFieldtrip()">Use</button> &nbsp; Student Fieldtrip &nbsp; //</li>' +
      '<li><button onclick="studentWorkshop()">Use</button> &nbsp; Student Workshop &nbsp; //</li>' +
+     '<li><button onclick="attendSpeaker()">Use</button> &nbsp; Attend Speaker &nbsp; //</li>' +
+     '<li><button onclick="attendLecture()">Use</button> &nbsp; Attend Lecture &nbsp; //</li>' +
     '</ul></div>';
    
    botFunctions = '<b>Event Functions</b>' +
@@ -233,6 +241,19 @@ function studentWorkshop() {
     useFunction.innerHTML = 'Student Workshops';
     
 }
+
+
+function attendSpeaker() {
+    useFunction.innerHTML = 'Attend Speaker';
+}
+
+
+function attendLecture() {
+    useFunction.innerHTML = 'Attend Lecture';
+    
+}
+
+
 
 
 
