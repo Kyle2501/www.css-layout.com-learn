@@ -111,15 +111,34 @@ function openClasses() {
    // veiw.style.backgroundColor = "black";
    
    function_code = '<div><ul class="function_list">' +
-     '<li><button>Use</button> &nbsp; List Class &nbsp; //</li>' +
-     '<li><button>Use</button> &nbsp; Load Class &nbsp; //</li>' +
-     '<li><button>Use</button> &nbsp; Join Class &nbsp; //</li>' +
-     '<li><button>Use</button> &nbsp; Leave Class &nbsp; //</li>' +
+     '<li><button onclick="listClass()">Use</button> &nbsp; List Class &nbsp; //</li>' +
+     '<li><button onclick="loadClass()">Use</button> &nbsp; Load Class &nbsp; //</li>' +
+     '<li><button onclick="joinClass()">Use</button> &nbsp; Join Class &nbsp; //</li>' +
+     '<li><button onclick="leaveClass()">Use</button> &nbsp; Leave Class &nbsp; //</li>' +
     '</ul></div>';
    
    botFunctions = '<b>Class Functions</b>' + function_code;
   
    makeNew(botFunctions);
+    
+}
+
+
+function listClass() {
+    useFunction.innerHTML = 'List Class';
+}
+
+function loadClass() {
+    useFunction.innerHTML = 'Load Class';
+}
+
+function joinClass() {
+    useFunction.innerHTML = 'Join Class';
+    
+}
+
+function leaveClass() {
+    useFunction.innerHTML = 'Leave Class';
     
 }
 
