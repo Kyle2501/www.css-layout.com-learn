@@ -71,22 +71,33 @@ body { padding-bottom: 175px; }
 <script>
 
 function changeColor() { document.getElementById("action_area_data").style.backgroundColor = "#00FF00"; }
+
+
+var classesActions = document.getElementById("classesActions");
+
+var peopleActions = document.getElementById("peopleActions");
+
+var eventActions = document.getElementById("eventsActions");
+
+var projectsActions = document.getElementById("projectActions");
+
+
+
     
 function openClasses() { 
     
-    document.getElementById("classesActions").style.backgroundColor = "lightblue";
+  classesActions.style.backgroundColor = "lightblue";
     
    var veiw = document.getElementById("bot_action_display");
    
    veiw.style.backgroundColor = "black";
-    
     
 }
 
     
 function openPeople() { 
     
-    document.getElementById("peopleActions").style.backgroundColor = "lightblue";
+    peopleActions.style.backgroundColor = "lightblue";
     
    var veiw = document.getElementById("bot_action_display");
    
@@ -98,7 +109,7 @@ function openPeople() {
     
 function openEvents() { 
     
-    document.getElementById("eventsActions").style.backgroundColor = "lightblue";
+    eventActions.style.backgroundColor = "lightblue";
     
    var veiw = document.getElementById("bot_action_display");
    
@@ -110,7 +121,7 @@ function openEvents() {
     
 function openProjects() { 
     
-    document.getElementById("projectActions").style.backgroundColor = "lightblue";
+    projectsActions.style.backgroundColor = "lightblue";
     
    var veiw = document.getElementById("bot_action_display");
    
