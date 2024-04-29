@@ -82,11 +82,19 @@ var eventActions = document.getElementById("eventsActions");
 var projectsActions = document.getElementById("projectActions");
 
 
+var action_current = "classesActions";
 
+function setCurrent(pass) {
+    action_current = pass;
+}
     
 function openClasses() { 
     
+  document.getElementById('peopleAction').style.backgroundColor = "white";
+    
   classesActions.style.backgroundColor = "lightblue";
+  
+  action_current = 'classesActions';
     
    var veiw = document.getElementById("bot_action_display");
    
@@ -99,6 +107,8 @@ function openPeople() {
     
     peopleActions.style.backgroundColor = "lightblue";
     
+    action_current = '';
+    
    var veiw = document.getElementById("bot_action_display");
    
    veiw.style.backgroundColor = "black";
@@ -109,11 +119,14 @@ function openPeople() {
     
 function openEvents() { 
     
+    
     eventActions.style.backgroundColor = "lightblue";
     
-   var veiw = document.getElementById("bot_action_display");
+   var veiw = document.getElementById(action_current);
    
-   veiw.style.backgroundColor = "black";
+   veiw.style.backgroundColor = "#00FF00";
+   
+   setCurrent('eventActions');
     
     
 }
@@ -123,9 +136,11 @@ function openProjects() {
     
     projectsActions.style.backgroundColor = "lightblue";
     
-   var veiw = document.getElementById("bot_action_display");
+   var veiw = document.getElementById(action_current);
    
-   veiw.style.backgroundColor = "black";
+   veiw.style.backgroundColor = "#00FF00";
+   
+   setCurrent("projectsActions");
     
     
 }
