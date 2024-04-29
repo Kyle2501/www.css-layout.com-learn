@@ -20,6 +20,8 @@ body { padding-bottom: 175px; }
 .bot_nav ul li button { position: absolute; bottom: 4px; right: 5px; }
 
 
+ul.function_list li { margin-bottom: 15px; }
+
 .bot_action_button_wrap { margin: 10px; position: absolute; right: 15px; }
 
 
@@ -105,11 +107,11 @@ function openClasses() {
    
    // veiw.style.backgroundColor = "black";
    
-   function_code = '<div><ul>' +
-     '<li>List Class</li>' +
-     '<li>Load Class</li>' +
-     '<li>Join Class</li>' +
-     '<li>Leave Class</li>' +
+   function_code = '<div><ul class="function_list">' +
+     '<li><button>Use</button> &nbsp; List Class &nbsp; //</li>' +
+     '<li><button>Use</button> &nbsp; Load Class &nbsp; //</li>' +
+     '<li><button>Use</button> &nbsp; Join Class &nbsp; //</li>' +
+     '<li><button>Use</button> &nbsp; Leave Class &nbsp; //</li>' +
     '</ul></div>';
    
    botFunctions = '<b>Class Functions</b>' + function_code;
@@ -129,9 +131,9 @@ function openPeople() {
    
   // veiw.style.backgroundColor = "black";
   
-  function_code = '<div><ul>' +
-    '<li>Meet Teacher</li>' +
-    '<li>Meet Students</li>' +
+  function_code = '<div><ul class="function_list">' +
+    '<li><button>Use</button> &nbsp; Meet Teacher &nbsp; //</li>' +
+    '<li><button>Use</button> &nbsp; Meet Students &nbsp; //</li>' +
    '</ul></div>';
   
   botFunctions = '<b>People Functions</b>' + function_code;
@@ -152,10 +154,10 @@ function openEvents() {
    veiw.style.backgroundColor = "#00FF00";
    
    
-   function_code = '<div><ul>' +
-     '<li>Watch Movie</li>' +
-     '<li>Student Feildtrip</li>' +
-     '<li>Student Workshop</li>' +
+   function_code = '<div><ul class="function_list">' +
+     '<li><button>Use</button> &nbsp; Watch Movie &nbsp; //</li>' +
+     '<li><button>Use</button> &nbsp; Student Feildtrip &nbsp; //</li>' +
+     '<li><button>Use</button> &nbsp; Student Workshop &nbsp; //</li>' +
     '</ul></div>';
    
    botFunctions = '<b>Event Functions</b>' +
@@ -179,9 +181,9 @@ function openProjects() {
    
   // document.getElementById("bot_action_display").innerHTML = 'passget';
   
-  function_code = '<div><ul>' +
-    '<li>List Projects</li>' +
-    '<li>Homework</li>' +
+  function_code = '<div><ul class="function_list">' +
+    '<li><button>Use</button> &nbsp; List Projects &nbsp; //</li>' +
+    '<li><button>Use</button> &nbsp; Homework &nbsp; //</li>' +
   '</ul></div>';
   
   botFunctions = '<b>Project Functions</b>' + function_code;
