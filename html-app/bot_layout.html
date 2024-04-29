@@ -85,7 +85,12 @@ var projectsActions = document.getElementById("projectActions");
 var action_current = "classesActions";
 
 function setCurrent(pass) {
-    action_current = pass;
+    
+    action_name = document.getElementById("bot_action_display").innerHTML;
+    
+    action_name = 'passget';
+    
+    
 }
     
 function openClasses() { 
@@ -140,11 +145,18 @@ function openProjects() {
    
    veiw.style.backgroundColor = "#00FF00";
    
+  // document.getElementById("bot_action_display").innerHTML = 'passget';
+  
+  makeNew('tgh');
+   
    setCurrent("projectsActions");
-    
-    
+   
 }
+
+function makeNew(hi) {
     
+    document.getElementById("bot_action_display").innerHTML = hi;
+}
     
 </script>
 
