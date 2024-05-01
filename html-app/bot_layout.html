@@ -69,20 +69,26 @@ ul.function_list li { margin-bottom: 15px; }
 
 <div class="bot_action_button_wrap">
   <div class="bot_action_button_data">
-      <button onclick="activateBot()">Activate</button>
+    <button onclick="activateBot()">
+      Activate</button>
   </div>
-</div>
+</div><!-- - .bot_action_button_wrap - -->
 
 <div class="clear_action_button_wrap">
-    
-    <button onclick="clearActions()">Clear Actions</button>
-    
+  <button onclick="clearActions()">
+    Clear Actions</button>
 </div><!-- - .clear_action_button_wrap - -->
 
 <div class="botStatus_area_wrap">
   <div class="botStatus_area_data">
       hi
-      
+    <div class="status_log_data">
+        
+        <p>status log data</p>
+        
+        
+        
+    </div><!-- - .status_log_data - -->
       
   </div>
 </div><!-- - .botStatus_area_wrap - -->
@@ -91,9 +97,7 @@ ul.function_list li { margin-bottom: 15px; }
 
 function changeColor() { document.getElementById("action_area_data").style.backgroundColor = "#00FF00"; 
 
-document.getElementById("action_area_data").innerHTML = 'hello';
-    
-    
+// document.getElementById("action_area_data").innerHTML = 'hello';
     
 }
 
@@ -217,12 +221,8 @@ function meetStaff() {
 
 
 
-
-
     
 function openEvents() { 
-    
-    
     eventActions.style.backgroundColor = "lightblue";
     
    var veiw = document.getElementById(action_current);
@@ -247,6 +247,8 @@ function openEvents() {
     
     
 }
+
+
 
 function watchMovie() {
     useFunction.innerHTML = 'Watch Movie';
@@ -298,9 +300,7 @@ function openProjects() {
   botFunctions = '<b>Project Functions</b>' + function_code;
   
   makeNew(botFunctions);
-  
-   
-   setCurrent("projectsActions");
+  setCurrent("projectsActions");
    
 }
 
@@ -332,7 +332,8 @@ function activateBot() {
   document.getElementById("bot_action_display").innerHTML = 'hello';
 
   useFunction.innerHTML = 'hello';
-    
+
+  changeColor();
 }
 
 
