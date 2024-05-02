@@ -21,6 +21,8 @@ body { padding-bottom: 175px; }
 
 .interfaceNav_area ul li { outline: 1px solid #bbb; padding: 5px; margin-bottom: 10px; width: 125px; }
 
+.actionName_wrap { text-align: center; }
+
 
 .action_area_data { outline: 1px dashed #ccc; margin: 0 auto; width: 85%; min-height: 125px; }
 
@@ -50,6 +52,11 @@ body { padding-bottom: 175px; }
 
 <div class="action_area_wrap">
   hi
+  
+  <div class="actionName_wrap">
+    <div id="actionName_data"></div>
+  </div>
+  
   <div class="action_area_data" id="action_area_data">
       
       
@@ -72,6 +79,8 @@ var navManage = document.getElementById("navManage");
 
 var navSettings = document.getElementById("navSettings");
 
+var actionName = document.getElementById("actionName_data");
+
 
 
 
@@ -84,6 +93,8 @@ function createNew() {
  navCreateNew.style.backgroundColor = "#00FF00";
     
  actionArea_wrap.style.backgroundColor = 'lightblue';
+ 
+ actionName.innerHTML = 'Create New';
     
  actionArea_wrap.innerHTML = 'Create New';
     
