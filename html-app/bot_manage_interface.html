@@ -32,20 +32,20 @@ body { padding-bottom: 175px; }
 
 
 <div class="botNav_area_wrap">
-    <ul>
-        <li onclick="createNew()">Create New</li>
-        <li onclick="update()">Update</li>
-        <li onclick="remove()">Remove</li>
-    </ul>
+ <ul>
+  <li id="navCreateNew" onclick="createNew()">Create New</li>
+  <li id="navUpdate" onclick="update()">Update</li>
+  <li id="navRemove" onclick="remove()">Remove</li>
+ </ul>
 </div>
 
 <div class="interfaceNav_area">
-    <ul>
-        <li onclick="dashboard()">Dashboard</li>
-        <li onclick="manage()">Manage</li>
-        <li onclick="settings()">Settings</li>
+ <ul>
+  <li id="navDashboard" onclick="dashboard()">Dashboard</li>
+  <li id="navManage" onclick="manage()">Manage</li>
+  <li id="navSettings" onclick="settings()">Settings</li>
         
-    </ul>
+ </ul>
 </div>
 
 <div class="action_area_wrap">
@@ -59,47 +59,77 @@ body { padding-bottom: 175px; }
 
 <script>
 
+var navCreateNew = document.getElementById("navCreateNew");
+
+var navUpdate = document.getElementById("navUpdate");
+
+var navRemove = document.getElementById("navRemove");
+
+
+var navDashboard = document.getElementById("navDashboard");
+
+var navManage = document.getElementById("navManage");
+
+var navSettings = document.getElementById("navSettings");
+
+
+
+
+
+
 var actionArea_wrap = document.getElementById("action_area_data");
     
 function createNew() {
+
+ navCreateNew.style.backgroundColor = "#00FF00";
     
-    actionArea_wrap.style.backgroundColor = 'lightblue';
+ actionArea_wrap.style.backgroundColor = 'lightblue';
     
-    actionArea_wrap.innerHTML = 'Create New';
+ actionArea_wrap.innerHTML = 'Create New';
     
 }
 
 function update() {
     
-    actionArea_wrap.innerHTML = 'Update';
+ navUpdate.style.backgroundColor = "#00FF00";
+    
+ actionArea_wrap.innerHTML = 'Update';
     
     
 }
 
 function remove() {
     
-    actionArea_wrap.innerHTML = 'Remove';
+ navRemove.style.backgroundColor = "#00FF00";
+    
+ actionArea_wrap.innerHTML = 'Remove';
     
     
 }
 
 function dashboard() {
     
-    actionArea_wrap.innerHTML = 'Dashboard';
+ navDashboard.style.backgroundColor = "#00FF00";
+    
+ actionArea_wrap.innerHTML = 'Dashboard';
     
     
 }
 
 function manage() {
     
-    actionArea_wrap.innerHTML = 'Manage';
+ navManage.style.backgroundColor = "#00FF00";
+    
+ actionArea_wrap.innerHTML = 'Manage';
     
     
 }
 
 function settings() {
     
-    actionArea_wrap.innerHTML = 'Settings';
+ navSettings.style.backgroundColor = "#00FF00";
+    
+ actionArea_wrap.innerHTML = 'Settings';
 }
 
 
