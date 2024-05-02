@@ -33,24 +33,24 @@ body { padding-bottom: 175px; }
 
 <div class="botNav_area_wrap">
     <ul>
-        <li>Create New</li>
-        <li>Update</li>
-        <li>Remove</li>
+        <li onclick="createNew()">Create New</li>
+        <li onclick="update()">Update</li>
+        <li onclick="remove()">Remove</li>
     </ul>
 </div>
 
 <div class="interfaceNav_area">
     <ul>
-        <li>Dashboard</li>
-        <li>Manage</li>
-        <li>Settings</li>
+        <li onclick="dashboard()">Dashboard</li>
+        <li onclick="manage()">Manage</li>
+        <li onclick="settings()">Settings</li>
         
     </ul>
 </div>
 
 <div class="action_area_wrap">
   hi
-  <div class="action_area_data">
+  <div class="action_area_data" id="action_area_data">
       
       
         
@@ -58,34 +58,48 @@ body { padding-bottom: 175px; }
 </div><!-- - .action_area_wrap - -->
 
 <script>
+
+var actionArea_wrap = document.getElementById("action_area_data");
     
 function createNew() {
+    
+    actionArea_wrap.style.backgroundColor = 'lightblue';
+    
+    actionArea_wrap.innerHTML = 'Create New';
     
 }
 
 function update() {
+    
+    actionArea_wrap.innerHTML = 'Update';
     
     
 }
 
 function remove() {
     
+    actionArea_wrap.innerHTML = 'Remove';
+    
     
 }
 
 function dashboard() {
+    
+    actionArea_wrap.innerHTML = 'Dashboard';
     
     
 }
 
 function manage() {
     
+    actionArea_wrap.innerHTML = 'Manage';
+    
     
 }
 
 function settings() {
     
-    
+    actionArea_wrap.innerHTML = 'Settings';
 }
 
 
