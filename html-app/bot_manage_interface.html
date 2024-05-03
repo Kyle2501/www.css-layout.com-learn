@@ -24,7 +24,14 @@ body { padding-bottom: 175px; }
 .actionName_wrap { text-align: center; }
 
 
-.action_area_data { outline: 1px dashed #ccc; margin: 0 auto; width: 85%; min-height: 125px; }
+.action_area_data { outline: 1px dashed #ccc; margin: 0 auto; width: 85%; min-height: 125px; padding: 5px; }
+
+.addNew_wrap div { outline: 1px dashed #999; padding: 5px; width: 80%; margin: 0 auto; margin-bottom: 10px; }
+
+
+.addClass_wrap { 
+    outline: 1px dashed #999; padding: 5px; width: 80%; margin: 0 auto;
+}
 
 </style>
 </head>
@@ -98,8 +105,78 @@ function pastAction() {
     
     
 };
+
+function loadNav() {
     
-    
+    actionID.innerHTML = 'navOpen';
+}
+
+var addNew_HTML_data = '<div class="addNew_wrap">' +
+  '<div onclick="addNew_Teacher()">addNew Teacher</div>' +
+  '<div onclick="addNew_Student()">addNew Student</div>' +
+  '<div onclick="addNew_Mentor()">addNew Mentor</div>' +
+  '<div onclick="addNew_Staff()">addNew Staff</div><hr />' +
+  '<div onclick="addNew_Project()">addNew Project</div>' +
+  '<div onclick="addNew_Movie()">addNew Movie</div>' +
+  '<div onclick="addNew_Feildtrip()">addNew Feildtrip</div>' +
+  '<div onclick="addNew_Workshop()">addNew Workshop</div>' +
+  '<div onclick="addNew_Speaker()">addNew Speaker</div>' +
+  '<div onclick="addNew_Lecture()">addNew Lecture</div>' +
+  '</div>'
+  
+ 
+ function addNew_Teacher() {
+     
+     
+ }
+ 
+ function addNew_Student() {
+     
+     
+ }
+ 
+ function addNew_Mentor() {
+     
+     
+ }
+ 
+ function addNew_Staff() {
+     
+     
+ }
+ 
+ function addNew_Project() {
+     
+     
+ }
+ 
+ function addNew_Movie() {
+     
+     
+ }
+ 
+ function addNew_Feildtrip() {
+     
+     
+ }
+ 
+ function addNew_Workshop() {
+     
+     
+ }
+ 
+ function addNew_Speaker() {
+     
+     
+ }
+ 
+ function addNew_Lecture() {
+     
+     
+ }
+ 
+ 
+  
     
 function createNew() {
     
@@ -107,11 +184,14 @@ function createNew() {
 
  navCreateNew.style.backgroundColor = "#00FF00";
     
- actionArea_wrap.style.backgroundColor = 'lightblue';
+// actionArea_wrap.style.backgroundColor = 'lightblue';
  
  actionName.innerHTML = 'Create New';
+ 
+ HTMLcreateNew = '<div class="addClass_wrap">' +
+  ' add New Class</div>' + addNew_HTML_data
     
- actionArea_wrap.innerHTML = 'Create New';
+ actionArea_wrap.innerHTML = 'Create New' + HTMLcreateNew;
  
  actionID.innerHTML = 'navCreateNew';
     
@@ -151,7 +231,7 @@ function remove() {
  actionID.innerHTML = 'navRemove';
     
     
-}
+};
 
 function dashboard() {
     
@@ -166,7 +246,7 @@ function dashboard() {
 
  actionID.innerHTML = 'navDashboard';
     
-}
+};
 
 function manage() {
     
@@ -182,7 +262,7 @@ function manage() {
  actionID.innerHTML = 'navManage';
     
     
-}
+};
 
 function settings() {
     
@@ -198,9 +278,9 @@ function settings() {
  actionID.innerHTML = 'navSettings';
  
  
-}
+};
 
-
+loadNav();
 
     
 </script>
