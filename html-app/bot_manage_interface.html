@@ -64,6 +64,10 @@ body { padding-bottom: 175px; }
   </div><!-- - .action_area_data - -->
 </div><!-- - .action_area_wrap - -->
 
+<div class="actionId_wrap">hi
+  <div id="actionId_name"></div>
+</div><!-- - .actionId_wrap - -->
+
 <script>
 
 var navCreateNew = document.getElementById("navCreateNew");
@@ -81,7 +85,7 @@ var navSettings = document.getElementById("navSettings");
 
 var actionName = document.getElementById("actionName_data");
 
-
+var actionID = document.getElementById("actionId_name");
 
 
 
@@ -89,6 +93,8 @@ var actionName = document.getElementById("actionName_data");
 var actionArea_wrap = document.getElementById("action_area_data");
     
 function createNew() {
+    
+   // actionID.innerHTML;
 
  navCreateNew.style.backgroundColor = "#00FF00";
     
@@ -97,6 +103,8 @@ function createNew() {
  actionName.innerHTML = 'Create New';
     
  actionArea_wrap.innerHTML = 'Create New';
+ 
+ actionID.innerHTML = 'navCreateNew';
     
 }
 
@@ -107,6 +115,10 @@ function update() {
  actionName.innerHTML = 'Update';
     
  actionArea_wrap.innerHTML = 'Update';
+ 
+ pastAction = actionID.innerHTML;
+ 
+ document.getElementById(pastAction).style.backgroundColor = "lightblue";
     
     
 }
