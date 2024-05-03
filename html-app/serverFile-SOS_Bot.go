@@ -379,6 +379,70 @@ func endClass() {
     
 }
 
+
+func addNew(w http.ResponseWriter, r *http.Request) {
+    
+    if r.URL.Path == "addNewTeacher" {
+        
+        
+    }
+    
+      
+    if r.URL.Path == "addNewStudent" {
+        
+        
+    }
+    
+    
+          
+    if r.URL.Path == "addNewMentor" {
+        
+        
+    }
+    
+    if r.URL.Path == "addNewStaff" {
+        
+        
+    }
+    
+        
+    if r.URL.Path == "addNewProject" {
+        
+        
+    }
+    
+    if r.URL.Path == "addNewMovie" {
+        
+        
+    }
+    
+    if r.URL.Path == "addNewFeildtrip" {
+        
+        
+    }
+    
+    if r.URL.Path == "addNewWorkshop" {
+        
+        
+    }
+    
+    if r.URL.Path == "addNewSpeaker" {
+        
+        
+    }
+    
+    if r.URL.Path == "addNewLecture" {
+        
+        
+    }
+    
+    
+    
+} // addNew func
+
+
+
+
 // . indexHandler
 func indexHandler(w http.ResponseWriter, r *http.Request) {
 
@@ -446,7 +510,18 @@ func main() {
   http.HandleFunc("/action/askquestions", askQuestions)
  
  
-
+  http.HandleFunc("/action/addNewTeacher", addNew)
+  http.HandleFunc("/action/addNewStudent", addNew)
+  http.HandleFunc("/action/addNewMentor", addNew)
+  http.HandleFunc("/action/addNewStaff", addNew)
+  http.HandleFunc("/action/addNewProject", addNew)
+  http.HandleFunc("/action/addNewMovie", addNew)
+  http.HandleFunc("/action/addNewFeildtrip", addNew)
+  http.HandleFunc("/action/addNewWorkshop", addNew)
+  http.HandleFunc("/action/addNewSpeaker", addNew)
+  http.HandleFunc("/action/addNewLecture", addNew)
+ 
+ 
  
  http.HandleFunc("/homepage", indexHandler)
     
