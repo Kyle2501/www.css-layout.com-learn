@@ -88,9 +88,18 @@ var actionName = document.getElementById("actionName_data");
 var actionID = document.getElementById("actionId_name");
 
 
-
-
 var actionArea_wrap = document.getElementById("action_area_data");
+    
+
+function pastAction() {
+
+ pastAction = actionID.innerHTML;
+ document.getElementById(pastAction).style.backgroundColor = "lightblue";
+    
+    
+};
+    
+    
     
 function createNew() {
     
@@ -106,7 +115,7 @@ function createNew() {
  
  actionID.innerHTML = 'navCreateNew';
     
-}
+};
 
 function update() {
     
@@ -115,13 +124,18 @@ function update() {
  actionName.innerHTML = 'Update';
     
  actionArea_wrap.innerHTML = 'Update';
- 
+
+
+
+// pastAction();
+
  pastAction = actionID.innerHTML;
- 
  document.getElementById(pastAction).style.backgroundColor = "lightblue";
+ 
+ actionID.innerHTML = 'navUpdate';
+ 
     
-    
-}
+};
 
 function remove() {
     
@@ -130,6 +144,11 @@ function remove() {
  actionName.innerHTML = 'Remove';
     
  actionArea_wrap.innerHTML = 'Remove';
+ 
+ pastAction = actionID.innerHTML;
+ document.getElementById(pastAction).style.backgroundColor = "lightblue";
+ 
+ actionID.innerHTML = 'navRemove';
     
     
 }
@@ -141,7 +160,11 @@ function dashboard() {
  actionName.innerHTML = 'Dashboard';
     
  actionArea_wrap.innerHTML = 'Dashboard';
-    
+ 
+ pastAction = actionID.innerHTML;
+ document.getElementById(pastAction).style.backgroundColor = "lightblue";
+
+ actionID.innerHTML = 'navDashboard';
     
 }
 
@@ -152,6 +175,11 @@ function manage() {
  actionName.innerHTML = 'Manage';
     
  actionArea_wrap.innerHTML = 'Manage';
+ 
+ pastAction = actionID.innerHTML;
+ document.getElementById(pastAction).style.backgroundColor = "lightblue";
+ 
+ actionID.innerHTML = 'navManage';
     
     
 }
@@ -163,6 +191,13 @@ function settings() {
  actionName.innerHTML = 'Settings';
     
  actionArea_wrap.innerHTML = 'Settings';
+ 
+ pastAction = actionID.innerHTML;
+ document.getElementById(pastAction).style.backgroundColor = "lightblue";
+ 
+ actionID.innerHTML = 'navSettings';
+ 
+ 
 }
 
 
