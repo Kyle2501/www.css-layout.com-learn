@@ -156,15 +156,15 @@ ul li { margin-bottom: 8px; }
     <div class="example_option_wrap">
       <div class="example_option_data">
           
-        <div class="example_option_01">
+        <div onclick="openExample_01()" class="example_option_01">
          1
         </div>
         
-        <div class="example_option_02">
+        <div onclick="openExample_02()" class="example_option_02">
          2
         </div>
         
-        <div class="example_option_03">
+        <div onclick="openExample_03()" class="example_option_03">
          3
         </div>
           
@@ -177,7 +177,9 @@ ul li { margin-bottom: 8px; }
    </div>
     
     <div class="example_code_wrap">
-    body { }
+      <div id="example_code_data">
+        body { }
+      </div>
     </div>
     
   <div class="step_area_wrap">
@@ -245,6 +247,31 @@ ul li { margin-bottom: 8px; }
    
   </div><!-- - .shop_products_data - -->
 </div>
+
+
+<script>
+
+var example_code_data = document.getElementById("example_code_data");
+
+
+function openExample_01() {
+    example_code_data.innerHTML = "01";
+    
+}
+
+
+function openExample_02() {
+    example_code_data.innerHTML = "02";
+    
+}
+
+function openExample_03() {
+    example_code_data.innerHTML = "03";
+    
+}
+    
+    
+</script>
 
 
 
