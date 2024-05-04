@@ -28,9 +28,17 @@ body { padding-bottom: 175px; }
 
 .vocab_name_wrap { display: inline-block; border-left: 3px solid #888; padding-left: 10px; }
 
+.vocab_list_nav { display: inline-block; vertical-align: top; }
+
+.vocab_list_nav ul li { outline: 1px dotted #ccc; margin: 7px; padding: 8px; width: 75px; }
+
+.vocabList_wrap { display: inline-block; margin: 45px;  }
+
 .vocab_list_wrap { display: inline-block; vertical-align: top; outline: 1px dotted #ccc; margin: 10px; padding: 15px; }
 
 .vocab_list_wrap ul { padding-left: 10px; }
+
+.vocab_list_wrap ul li { margin-bottom: 7px; }
 
 
 </style>
@@ -47,7 +55,7 @@ body { padding-bottom: 175px; }
 <span> &nbsp; Home</span>
  </div>
  <div class="level_name_wrap">
- <p align="right">Project Level 01 ~ <b>The Box Model</b></p></div>
+ <p align="right">Project Level 02 ~ <b>The Box Model</b></p></div>
  <p>Students Online Study</p>
  <hr />
  
@@ -92,19 +100,43 @@ body { padding-bottom: 175px; }
  <div class="section_data">
      <div>
   <p class="vocab_name_wrap"><b>Project Level ~ Vocab</b></p></div>
-  <div class="vocab_list_wrap">
-      ~ <b>Sides</b>
+  
+  <div class="vocab_list_nav">
+   <ul>
+    <li onclick="openSize_vocab()">~ Size</li>
+    <li onclick="openStyle_vocab()">~ Style</li>
+    <li onclick="openSides_vocab()">~ Sides</li>
+    <li onclick="openSpace_vocab()">~ Space</li>
+        
+   </ul>
+      
+  </div><!-- - .vocab_list_nav - -->
+  
+  <div class="vocabList_wrap">
+      <div id="vocabList_data">
+          
+          
+      </div>
+  </div>
+ 
+ <hr />
+    
+    <div class="vocab_list_wrap">
+       ~ <b>Size</b>
+       <hr />
       <ul>
-          <li>left</li>
-          <li>top</li>
-          <li>right</li>
-          <li>bottom</li>
+          <li>width</li>
+          <li>height</li>
+         <!-- <li>border-radius</li> -->
+          
       </ul>
-                
-  </div><!-- - .vocab_list_wrap - -->
+      
+  </div>
+  
   
   <div class="vocab_list_wrap">
       ~ <b>Style</b>
+      <hr />
       <ul>
           <li>padding</li>
           <li>outline</li>
@@ -113,12 +145,27 @@ body { padding-bottom: 175px; }
       </ul>
   </div>
   
+    <div class="vocab_list_wrap">
+      ~ <b>Sides</b>
+      <hr />
+      <ul>
+          <li>left</li>
+          <li>top</li>
+          <li>right</li>
+          <li>bottom</li>
+      </ul>
+                
+  </div><!-- - .vocab_list_wrap - -->
+
+  
   <div class="vocab_list_wrap">
        ~ <b>Placement</b>
+       <hr />
       <ul>
           <li>position</li>
           <li>z-index</li>
-          
+          <li>display</li>
+          <li>visibility</li>
       </ul>
       
   </div>
@@ -127,10 +174,30 @@ body { padding-bottom: 175px; }
  </div><!-- - .section_data - -->
 </div><!-- - .section_wrap - -->
 
+<hr />
+
+<div class="section_wrap">
+ <div class="section_data">
+     <div>
+  <p class="vocab_name_wrap"><b>Project Level ~ Instructions</b></p></div>
+ 
+ <hr />
+
+<div class="section_wrap">
+ <div class="section_data">
+     <div>
+  <p class="vocab_name_wrap"><b>Project Level ~ Uploads</b></p></div>
+  
+  
+  
+ </div><!-- - .section_data - -->
+</div><!-- - .section_wrap - -->
 
 <script>
 
 var example_code_data = document.getElementById("example_code_data");
+
+var vocabList_data = document.getElementById("vocabList_data");
 
 
 function openExample_01() {
@@ -148,6 +215,28 @@ function openExample_03() {
     example_code_data.innerHTML = "03";
     
 }
+
+function openSize_vocab() {
+    vocabList_data.innerHTML = '~ Size';
+    
+}
+
+function openStyle_vocab() {
+    vocabList_data.innerHTML = '~ Style';
+    
+}
+
+function openSides_vocab() {
+    vocabList_data.innerHTML = '~ Sides';
+    
+}
+
+function openSpace_vocab() {
+    vocabList_data.innerHTML = '~ Space';
+    
+}
+
+
     
     
 </script>
