@@ -10,6 +10,17 @@ body { padding-bottom: 175px; }
 
 .login_wrap { position: absolute; right: 10px; top: 5px; }
 
+.example_section_name { display: inline-block; }
+
+.example_code_wrap { outline: 1px solid #999; padding: 15px; min-height: 135px; background-color: #f9edff; color: #5a5475; }
+
+.example_option_wrap { display: inline-block; position: absolute; right: 15px; }
+
+.example_option_data { float: right; }
+
+.example_option_data div { display: inline-block; padding: 5px; outline: 1px solid #ddd; margin: 5px; width: 35px; text-align: center; }
+
+
 </style>
 </head>
 <body>
@@ -28,8 +39,63 @@ body { padding-bottom: 175px; }
  </div>
  
 </div><!-- - .topBar_wrap - -->
+
+<div class="section_wrap">
+ <div class="section_data">
+  
+  <div class="example_option_wrap">
+  <div class="example_option_data">
+  
+   <div onclick="openExample_01()" class="example_option_01">1</div>
+        
+   <div onclick="openExample_02()" class="example_option_02">2</div>
+        
+   <div onclick="openExample_03()" class="example_option_03">3</div>
+          
+ </div>
+</div><!-- - .example_option_wrap - -->
+    
+<div class="example_section_name">
+  <p><b>Example CSS Code</b></p>
+</div>
+    
+    <div class="example_code_wrap">
+      <div id="example_code_data">
+        body { }
+      </div>
+    </div>
+    
+  <div class="step_area_wrap">
+                
+  </div><!-- - .step_area_wrap - -->
+ </div><!-- - .section_data - -->
+</div><!-- - .section_wrap - -->
+
+
+<script>
+
+var example_code_data = document.getElementById("example_code_data");
+
+
+function openExample_01() {
+    example_code_data.innerHTML = "01";
+    
+}
+
+
+function openExample_02() {
+    example_code_data.innerHTML = "02";
+    
+}
+
+function openExample_03() {
+    example_code_data.innerHTML = "03";
+    
+}
     
     
+</script>
+
     
     
 </body>
