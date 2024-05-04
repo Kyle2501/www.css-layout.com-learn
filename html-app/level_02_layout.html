@@ -237,12 +237,22 @@ function openStyle_vocab() {
 }
 
 function openSides_vocab() {
-    vocabList_data.innerHTML = '~ <b>Sides</b>';
+    vocabList_data.innerHTML = '~ <b>Sides</b>' +
+    '<hr /><ul class="vocabList_data">' +
+    '<li>left</li>' +
+    '<li>top</li>' +
+    '<li>right</li>' +
+    '<li>bottom</li>';
     
 }
 
 function openSpace_vocab() {
-    vocabList_data.innerHTML = '~ <b>Space</b>';
+    vocabList_data.innerHTML = '~ <b>Space</b>' +
+    '<hr /><ul class="vocabList_data">' +
+    '<li>display</li>' +
+    '<li>position</li>' +
+    '<li>visibility</li>' +
+    '<li>z-index</li>';
     
 }
 
