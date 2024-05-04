@@ -32,7 +32,7 @@ body { padding-bottom: 175px; }
 
 .vocab_list_nav ul li { outline: 1px dotted #ccc; margin: 7px; padding: 8px; width: 75px; }
 
-.vocabList_wrap { display: inline-block; margin: 45px;  }
+.vocabList_wrap { display: inline-block; margin: 45px; outline: 1px dotted #ccc; padding: 15px; }
 
 .vocab_list_wrap { display: inline-block; vertical-align: top; outline: 1px dotted #ccc; margin: 10px; padding: 15px; }
 
@@ -217,22 +217,32 @@ function openExample_03() {
 }
 
 function openSize_vocab() {
-    vocabList_data.innerHTML = '~ Size';
+    vocabList_data.innerHTML = '~ <b>Size</b>' +
+    '<hr /><ul class="vocabList_data">' +
+    '<li>width</li>' +
+    '<li>height</li>' +
+    '</ul>';
     
 }
 
 function openStyle_vocab() {
-    vocabList_data.innerHTML = '~ Style';
+    vocabList_data.innerHTML = '~ <b>Style</b>' +
+    '<hr /><ul class="vocabList_data">' +
+    '<li>padding</li>' +
+    '<li>outline</li>' +
+    '<li>margin</li>' +
+    '<li>border</li>' +
+    '</ul>';
     
 }
 
 function openSides_vocab() {
-    vocabList_data.innerHTML = '~ Sides';
+    vocabList_data.innerHTML = '~ <b>Sides</b>';
     
 }
 
 function openSpace_vocab() {
-    vocabList_data.innerHTML = '~ Space';
+    vocabList_data.innerHTML = '~ <b>Space</b>';
     
 }
 
