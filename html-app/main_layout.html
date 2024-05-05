@@ -49,6 +49,10 @@ ul li { margin-bottom: 8px; }
 
 .project_levels button { position: absolute; right: 35px; }
 
+.project_level_wrap { outline: 1px solid #888; padding: 10px; margin: 5px; }
+
+.project_level_name { border-right: 3px solid #888; padding: 10px; margin: 5px; }
+
 
 .start_class_wrap { text-align: center; }
 
@@ -106,7 +110,38 @@ ul li { margin-bottom: 8px; }
  </div><!-- - .outline_wrap - -->
 </div><!-- - .section_wrap - -->
   
-
+  
+<div class="section_wrap">
+ <div class="section_data">
+  
+  <div class="example_option_wrap">
+  <div class="example_option_data">
+  
+   <div onclick="openExample_01()" class="example_option_01">1</div>
+        
+   <div onclick="openExample_02()" class="example_option_02">2</div>
+        
+   <div onclick="openExample_03()" class="example_option_03">3</div>
+          
+ </div>
+</div><!-- - .example_option_wrap - -->
+    
+<div class="example_section_name">
+  <p><b>Example CSS Code</b></p>
+</div>
+    
+    <div class="example_code_wrap">
+      <div id="example_code_data">
+        body { }
+      </div>
+    </div>
+    
+    
+  <div class="step_area_wrap">
+                
+  </div><!-- - .step_area_wrap - -->
+ </div><!-- - .section_data - -->
+</div><!-- - .section_wrap - -->
 
 <div class="section_wrap">
   <div class="section_data">
@@ -138,7 +173,10 @@ ul li { margin-bottom: 8px; }
             
   </div><!-- - .section_data - -->
 </div><!-- - .section_wrap - -->
-  
+ 
+
+ 
+ 
 
 <div class="section_wrap">
   <p><b>Project Learning Levels</b></p>
@@ -149,37 +187,7 @@ ul li { margin-bottom: 8px; }
    <li>_ Level Three ~ // ~ Element Class Name</li>
   </ul>
 </div><!-- - .section_wrap - -->
-  
-<div class="section_wrap">
- <div class="section_data">
-  
-  <div class="example_option_wrap">
-  <div class="example_option_data">
-  
-   <div onclick="openExample_01()" class="example_option_01">1</div>
-        
-   <div onclick="openExample_02()" class="example_option_02">2</div>
-        
-   <div onclick="openExample_03()" class="example_option_03">3</div>
-          
- </div>
-</div><!-- - .example_option_wrap - -->
-    
-<div class="example_section_name">
-  <p><b>Example CSS Code</b></p>
-</div>
-    
-    <div class="example_code_wrap">
-      <div id="example_code_data">
-        body { }
-      </div>
-    </div>
-    
-  <div class="step_area_wrap">
-                
-  </div><!-- - .step_area_wrap - -->
- </div><!-- - .section_data - -->
-</div><!-- - .section_wrap - -->
+
   
   
   
@@ -188,20 +196,20 @@ ul li { margin-bottom: 8px; }
   <p><b>Project Learning Levels</b></p>
   <div class="project_levels">
 
-  <div>_ Level Zero 
-    <div>- Setup Environment
+  <div class="project_level_wrap">_ Level Zero 
+    <div class="project_level_name">- Setup Environment
     <button>Open</button></div></div>
 
-  <div>_ Level One 
-    <div>- Text and Color
+  <div class="project_level_wrap">_ Level One 
+    <div class="project_level_name">- Text and Color
     <button>Open</button></div></div>
 
-  <div>_ Level Two 
-    <div>- The Box Model
+  <div class="project_level_wrap">_ Level Two 
+    <div class="project_level_name">- The Box Model
     <button>Open</button></div></div>
 
-  <div>_ Level Three 
-    <div>- Element Class Names 
+  <div class="project_level_wrap">_ Level Three 
+    <div class="project_level_name">- Element Class Names 
     <button>Open</button></div></div>
     
 
