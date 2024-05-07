@@ -6,6 +6,15 @@ _ ° Hi Welcome !!
 
 ---
 
+_ ° Join as a Student ~ Process
+
++ Pay Student Fees
++ Join Google Classroom
++ Join Discord Channel
++ Make Notion Profile Page
+
+---
+
 hi
 
 _ ° ~ Project Level, Learning Levels . .
