@@ -57,6 +57,21 @@ func open_shoppingCart() {
     
 }
 
+func open_manageStore() {
+    
+    
+}
+
+
+func create_customerProfile() {
+    
+    
+}
+
+func searchProducts() {
+    
+    
+}
 
 
 
