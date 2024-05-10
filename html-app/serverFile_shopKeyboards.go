@@ -75,6 +75,52 @@ func searchProducts() {
 
 
 
+// ° -- product data structure
+
+func itemProduct_details() {
+    
+    
+}
+
+
+func itemProduct_images() {
+    
+    
+}
+
+func itemProduct_price() {
+    
+    
+}
+
+func itemProduct_paymentProcess() {
+    
+    
+}
+
+func itemProduct_producer() {
+    
+    
+}
+
+func itemProduct_date() {
+    
+    
+}
+
+func itemProduct_location() {
+    
+    
+}
+
+func itemProduct_quantity() {
+    
+    
+}
+
+
+
+
 func main() {
 
   appName := "SOS Bot App"
