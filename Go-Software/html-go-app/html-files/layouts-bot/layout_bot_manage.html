@@ -1,0 +1,403 @@
+<!doctype html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<style>
+
+body { padding-bottom: 175px; }
+
+.login_wrap { position: absolute; right: 10px; top: 5px; }
+
+
+.action_area_wrap { border-top: 2px solid #777; }
+
+.botNav_area_wrap { display: inline-block; }
+
+.botNav_area_wrap ul li { outline: 1px solid #bbb; padding: 5px; margin-bottom: 10px; width: 145px; }
+
+.interfaceNav_area { display: inline-block; }
+
+.interfaceNav_area ul li { outline: 1px solid #bbb; padding: 5px; margin-bottom: 10px; width: 125px; }
+
+.actionName_wrap { text-align: center; }
+
+
+.action_area_data { outline: 1px dashed #ccc; margin: 0 auto; width: 85%; min-height: 125px; padding: 5px; }
+
+.addNew_wrap div { outline: 1px dashed #999; padding: 5px; width: 80%; margin: 0 auto; margin-bottom: 10px; }
+
+
+.addClass_wrap { 
+    outline: 1px dashed #999; padding: 5px; width: 80%; margin: 0 auto;
+}
+
+form { font-size: 10px;  }
+
+</style>
+</head>
+<body>
+
+<p>Bot Manage Interface ~ Dashboard</p>
+
+
+<div class="botNav_area_wrap">
+ <ul>
+  <li id="navCreateNew" onclick="createNew()">Create New</li>
+  <li id="navUpdate" onclick="update()">Update</li>
+  <li id="navRemove" onclick="remove()">Remove</li>
+ </ul>
+</div>
+
+<div class="interfaceNav_area">
+ <ul>
+  <li id="navDashboard" onclick="dashboard()">Dashboard</li>
+  <li id="navManage" onclick="manage()">Manage</li>
+  <li id="navSettings" onclick="settings()">Settings</li>
+        
+ </ul>
+</div>
+
+<div class="action_area_wrap">
+  hi
+  
+  <div class="actionName_wrap">
+    <div id="actionName_data"></div>
+  </div>
+  
+  <div class="action_area_data" id="action_area_data">
+      
+      
+        
+  </div><!-- - .action_area_data - -->
+</div><!-- - .action_area_wrap - -->
+
+<div class="actionId_wrap">hi
+  <div id="actionId_name"></div>
+</div><!-- - .actionId_wrap - -->
+
+<script>
+
+var navCreateNew = document.getElementById("navCreateNew");
+
+var navUpdate = document.getElementById("navUpdate");
+
+var navRemove = document.getElementById("navRemove");
+
+
+var navDashboard = document.getElementById("navDashboard");
+
+var navManage = document.getElementById("navManage");
+
+var navSettings = document.getElementById("navSettings");
+
+var actionName = document.getElementById("actionName_data");
+
+var actionID = document.getElementById("actionId_name");
+
+
+var actionArea_wrap = document.getElementById("action_area_data");
+    
+
+function pastAction() {
+
+ pastAction = actionID.innerHTML;
+ document.getElementById(pastAction).style.backgroundColor = "lightblue";
+    
+    
+};
+
+function loadNav() {
+    
+    actionID.innerHTML = 'navOpen';
+}
+
+var addNew_HTML_data = '<div class="addNew_wrap">' +
+  '<div onclick="addNew_Teacher()">addNew Teacher</div>' +
+  '<div onclick="addNew_Student()">addNew Student</div>' +
+  '<div onclick="addNew_Mentor()">addNew Mentor</div>' +
+  '<div onclick="addNew_Staff()">addNew Staff</div><hr />' +
+  '<div onclick="addNew_Project()">addNew Project</div>' +
+  '<div onclick="addNew_Movie()">addNew Movie</div>' +
+  '<div onclick="addNew_Feildtrip()">addNew Feildtrip</div>' +
+  '<div onclick="addNew_Workshop()">addNew Workshop</div>' +
+  '<div onclick="addNew_Speaker()">addNew Speaker</div>' +
+  '<div onclick="addNew_Lecture()">addNew Lecture</div>' +
+  '</div>'
+  
+ 
+ function addNew_Teacher() {
+  actionName.innerHTML = 'addNew Teacher';
+  actionID.innerHTML = 'addNew_Teacher';
+  
+  HTMLcreateNew = '<div class="addNew_wrap">' +
+  ' add New Teacher</div>' +
+   '<form>' +
+     '<input /> &nbsp; New Teacher Name' +
+     '<p align="right"><input type="submit"></p>'
+  
+   '</form>'
+    
+  actionArea_wrap.innerHTML = 'Create New' + HTMLcreateNew;
+     
+ }
+ 
+ function addNew_Student() {
+  actionName.innerHTML = 'addNew Student';
+  actionID.innerHTML = 'addNew_Student';
+  
+  HTMLcreateNew = '<div class="addNew_wrap">' +
+  ' add New Student</div>' +
+   '<form>' +
+     '<input /> &nbsp; New Student Name' +
+     '<p align="right"><input type="submit"></p>'
+  
+   '</form>'
+    
+  actionArea_wrap.innerHTML = 'Create New' + HTMLcreateNew;
+     
+ }
+ 
+ function addNew_Mentor() {
+  actionName.innerHTML = 'addNew Mentor';
+  actionID.innerHTML = 'addNew_Mentor';
+  
+  HTMLcreateNew = '<div class="addNew_wrap">' +
+  ' add New Mentor</div>' +
+   '<form>' +
+     '<input /> &nbsp; New Mentor Name' +
+     '<p align="right"><input type="submit"></p>'
+  
+   '</form>'
+    
+  actionArea_wrap.innerHTML = 'Create New' + HTMLcreateNew;
+     
+ }
+ 
+ function addNew_Staff() {
+  actionName.innerHTML = 'addNew Staff';
+  actionID.innerHTML = 'addNew_Staff';
+  
+  HTMLcreateNew = '<div class="addNew_wrap">' +
+  ' add New Staff</div>' +
+   '<form>' +
+     '<input /> &nbsp; New Staff Name' +
+     '<p align="right"><input type="submit"></p>'
+  
+   '</form>'
+    
+  actionArea_wrap.innerHTML = 'Create New' + HTMLcreateNew;
+     
+ }
+ 
+ function addNew_Project() {
+  actionName.innerHTML = 'addNew Project';
+  actionID.innerHTML = 'addNew_Project';
+  
+  HTMLcreateNew = '<div class="addNew_wrap">' +
+   ' add New Project</div>' +
+   '<form>' +
+     '<input /> &nbsp; New Project Name' +
+     '<p align="right"><input type="submit"></p>'
+  
+   '</form>'
+    
+  actionArea_wrap.innerHTML = 'Create New' + HTMLcreateNew;
+     
+ }
+ 
+ function addNew_Movie() {
+  actionName.innerHTML = 'addNew Movie';
+  actionID.innerHTML = 'addNew_Movie';
+  
+  HTMLcreateNew = '<div class="addNew_wrap">' +
+  ' add New Movie</div>'+
+   '<form>' +
+     '<input /> &nbsp; New Movie Name' +
+     '<p align="right"><input type="submit"></p>'
+  
+   '</form>'
+    
+  actionArea_wrap.innerHTML = 'Create New' + HTMLcreateNew;
+     
+ }
+ 
+ function addNew_Feildtrip() {
+  actionName.innerHTML = 'addNew Feildtrip';
+  actionID.innerHTML = 'addNew_Feildtrip';
+  
+  HTMLcreateNew = '<div class="addNew_wrap">' +
+  ' add New Feildtrip</div>' +
+   '<form>' +
+     '<input /> &nbsp; New Feildtrip Name' +
+     '<p align="right"><input type="submit"></p>'
+  
+   '</form>'
+    
+  actionArea_wrap.innerHTML = 'Create New' + HTMLcreateNew;
+     
+ }
+ 
+ function addNew_Workshop() {
+  actionName.innerHTML = 'addNew Workshop';
+  actionID.innerHTML = 'addNew_Workshop';
+  
+  HTMLcreateNew = '<div class="addNew_wrap">' +
+  ' add New Workshop</div>' +
+   '<form>' +
+     '<input /> &nbsp; New Workshop Name' +
+     '<p align="right"><input type="submit"></p>'
+  
+   '</form>'
+    
+  actionArea_wrap.innerHTML = 'Create New' + HTMLcreateNew;
+  
+ }
+ 
+ function addNew_Speaker() {
+  actionName.innerHTML = 'addNew Speaker';
+  actionID.innerHTML = 'addNew_Speaker';
+  
+  HTMLcreateNew = '<div class="addNew_wrap">' +
+  ' add New Speaker</div>' +
+   '<form>' +
+     '<input /> &nbsp; New Speaker Name' +
+     '<p align="right"><input type="submit"></p>'
+  
+   '</form>'
+    
+  actionArea_wrap.innerHTML = 'Create New' + HTMLcreateNew;
+     
+ }
+ 
+ function addNew_Lecture() {
+  actionName.innerHTML = 'addNew Lecture';
+  actionID.innerHTML = 'addNew_Lecture';
+  
+  HTMLcreateNew = '<div class="addNew_wrap">' +
+  ' add New Lecture</div>' +
+   '<form>' +
+     '<input /> &nbsp; New Lecture Name' +
+     '<p align="right"><input type="submit"></p>'
+  
+   '</form>'
+    
+  actionArea_wrap.innerHTML = 'Create New' + HTMLcreateNew;
+  
+  
+ }
+ 
+ 
+  
+    
+function createNew() {
+    
+   // actionID.innerHTML;
+
+ navCreateNew.style.backgroundColor = "#00FF00";
+    
+// actionArea_wrap.style.backgroundColor = 'lightblue';
+ 
+ actionName.innerHTML = 'Create New';
+ 
+ HTMLcreateNew = '<div class="addClass_wrap">' +
+  ' add New Class</div>' + addNew_HTML_data
+    
+ actionArea_wrap.innerHTML = 'Create New' + HTMLcreateNew;
+ 
+ actionID.innerHTML = 'navCreateNew';
+    
+};
+
+function update() {
+    
+ navUpdate.style.backgroundColor = "#00FF00";
+ 
+ actionName.innerHTML = 'Update';
+    
+ actionArea_wrap.innerHTML = 'Update';
+
+
+
+// pastAction();
+
+ pastAction = actionID.innerHTML;
+ document.getElementById(pastAction).style.backgroundColor = "lightblue";
+ 
+ actionID.innerHTML = 'navUpdate';
+ 
+    
+};
+
+function remove() {
+    
+ navRemove.style.backgroundColor = "#00FF00";
+ 
+ actionName.innerHTML = 'Remove';
+    
+ actionArea_wrap.innerHTML = 'Remove';
+ 
+ pastAction = actionID.innerHTML;
+ document.getElementById(pastAction).style.backgroundColor = "lightblue";
+ 
+ actionID.innerHTML = 'navRemove';
+    
+    
+};
+
+function dashboard() {
+    
+ navDashboard.style.backgroundColor = "#00FF00";
+ 
+ actionName.innerHTML = 'Dashboard';
+    
+ actionArea_wrap.innerHTML = 'Dashboard';
+ 
+ pastAction = actionID.innerHTML;
+ document.getElementById(pastAction).style.backgroundColor = "lightblue";
+
+ actionID.innerHTML = 'navDashboard';
+    
+};
+
+function manage() {
+    
+ navManage.style.backgroundColor = "#00FF00";
+ 
+ actionName.innerHTML = 'Manage';
+    
+ actionArea_wrap.innerHTML = 'Manage';
+ 
+ pastAction = actionID.innerHTML;
+ document.getElementById(pastAction).style.backgroundColor = "lightblue";
+ 
+ actionID.innerHTML = 'navManage';
+    
+    
+};
+
+function settings() {
+    
+ navSettings.style.backgroundColor = "#00FF00";
+ 
+ actionName.innerHTML = 'Settings';
+    
+ actionArea_wrap.innerHTML = 'Settings';
+ 
+ pastAction = actionID.innerHTML;
+ document.getElementById(pastAction).style.backgroundColor = "lightblue";
+ 
+ actionID.innerHTML = 'navSettings';
+ 
+ 
+};
+
+loadNav();
+
+    
+</script>
+
+
+</body>
+</html>
