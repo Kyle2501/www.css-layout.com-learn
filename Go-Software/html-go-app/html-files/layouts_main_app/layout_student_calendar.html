@@ -24,8 +24,13 @@ body { padding-bottom: 175px; }
 
 .main_calendar_data { margin: 15px; padding-bottom: 65px; }
 
-.main_calendar_data ul li { margin-bottom: 15px; }
-    
+.main_calendar_data ul { padding-left: 10px; }
+
+.main_calendar_data ul li { margin-bottom: 15px; outline: 1px dashed #bbb; padding: 10px; }
+
+.time_wrap { display: inline-block; border-left: 3px solid #999; margin-left: 10px; padding-left: 10px; }
+
+
 </style>
 
 </head>
@@ -62,14 +67,15 @@ body { padding-bottom: 175px; }
     
 <div class="main_calendar_wrap">
   <div class="main_calendar_data">
-      
-      <ul>
-          <li>&nbsp; <b>_ Mon</b><i>day</i></li>
-          <li>&nbsp; <b>_ Wed</b><i>nesday</i></i></li>
-          <li>&nbsp; <b>_ Fri</b><i>day</i></li>
-          
-          
-      </ul>
+   <p>3 Day a Week Program</p>
+   <ul>
+    <li>&nbsp; <b>_ Mon</b><i>day</i>
+     <div class="time_wrap">10:am</div></li>
+    <li>&nbsp; <b>_ Wed</b><i>nesday</i></i>
+     <div class="time_wrap">10:am</div></li>
+    <li>&nbsp; <b>_ Fri</b><i>day</i>
+     <div class="time_wrap">10:am</div></li>
+   </ul>
       
       
   </div><!-- - .main_calendar_data - -->
