@@ -85,4 +85,11 @@ _ Major Bot Function Categories . .
 hi
 
 
-
++ / Index
++ / About
++ / List Classes
++ / Load Class 
++ / Join Class 
++ / Leave Class 
++ / Start Class 
++ / End Class 
