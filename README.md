@@ -93,3 +93,16 @@ hi
 + / Leave Class 
 + / Start Class 
 + / End Class 
+
+
+--- 
+Hi ~
+
++ / View Prohects
++ / Do Event 
++ / Homework 
++ / Watch Movie 
++ / Student Feildtrip 
++ / Meet Teacher 
++ / Meet Students 
++ / Ask Questions 
