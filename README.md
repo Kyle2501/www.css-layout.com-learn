@@ -59,8 +59,8 @@ _ ° ~ Project Level, Learning Levels . .
 
 _ , Lvl.00 ~ Setup Environment \
 _ , Lvl.01 ~ Text and Color \
-_ , Lvl.02 ~ The Box Model \
-_ , Lvl.03 ~ Element Class Names 
+_ , Lvl.02 ~ Box Model \
+_ , Lvl.03 ~ Element Names 
 
 
 ---
