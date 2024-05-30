@@ -98,7 +98,7 @@ hi
 --- 
 Hi ~
 
-+ / View Prohects
++ / View Projects
 + / Do Event 
 + / Homework 
 + / Watch Movie 
@@ -106,3 +106,18 @@ Hi ~
 + / Meet Teacher 
 + / Meet Students 
 + / Ask Questions 
+
+
+--- 
+Hi ~ 
+
++ / add New Teacher 
++ / add New Student 
++ / add New Mentor 
++ / add New Staff 
++ / add New Project 
++ / add New Movie 
++ / add New Feildtrip 
++ / add New Workshop 
++ / add New Speaker 
++ / add New Lecture
