@@ -38,6 +38,18 @@ _ ° Join as a Student ~ Process
 + Join Discord Channel
 + Make Notion Profile Page
 
+
+---
+Hi ~
+
+_ , Program Lesson Structure °
+
++ About
++ Vocab
++ Examples
++ Instructions
++ Uploads
+
 ---
 
 hi
